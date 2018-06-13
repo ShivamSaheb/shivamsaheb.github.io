@@ -33,5 +33,9 @@ header a{
 
 /* Main */
 #Main{
-    background-image: url('../shivamrsaheb.github.io/websitebackground.png') no-repeat;
+    min-height: 400px;
+    background: url('../shivamrsaheb.github.io/websitebackground.png') no-repeat 0 -250px;
+    background-size: cover;
+    text-align: center;
+    border-bottom: #ffa500;
 }

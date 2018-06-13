@@ -14,28 +14,36 @@ background-color: #f4f4f4;
 
 /* Header */
 header{
-    background: #35424a;
-    color: #ffa500;
-    padding-left: 25px;
+    color: #35424a;
+    padding-right: 25px;
     padding-top: 1px;
-    border-bottom: #ffa500 3px solid;
+}
+
+#Elements{
+    float: right;
     letter-spacing: 3px;
     word-spacing: 10px;
-    text-align: center;
+    padding-right: 25px;
+}
+
+#Name{
+    float: left;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    padding-left: 25px;
 }
 
 header a{ 
-    color: #ffa500;
+    color: #35424a;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
 }
 
 /* Main */
-#Main{
+#Main, #About, #Contact{
     min-height: 400px;
     background: url('../shivamrsaheb.github.io/websitebackground.png') no-repeat 0 -250px;
     background-size: cover;
     text-align: center;
-    border-bottom: #ffa500;
 }

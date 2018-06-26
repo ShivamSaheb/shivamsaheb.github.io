@@ -41,14 +41,12 @@ header a{
     
 }
 
-
 a:hover{
     -webkit-transition: 0.5s ease;
             transition: 0.5s ease;
             border-bottom: 1px solid #35424a;
     margin-right: 9px;
 }
-
 
 /* Main */
 body{

@@ -34,9 +34,11 @@ header{
 
 #Name{
     float: left;
+    color: #0b212e;
     letter-spacing: 3px;
     word-spacing: 10px;
     padding-left: 50px;
+    text-decoration: none;
 }
 
 a{ 
@@ -49,7 +51,7 @@ a{
 a:hover{
     -webkit-transition: 0.5s ease;
             transition: 0.5s ease;
-    margin-right: 9px;
+    color: white;
 }
 
 /* Main */

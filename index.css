@@ -1,22 +1,13 @@
-body{
-font:15px Arial, Helvetica, sans-serif;
-padding: 0;
-margin: 0;
-background-color: #f4f4f4;
-}
-
-/* Global */
-.container{
-    width: 80%;
-    margin:auto;
-    overflow: hidden;
+html{
+    font:15px Arial, Helvetica, sans-serif;
+    background: url('../shivamrsaheb.github.io/websitebackground.png') no-repeat 0 0px;
+    background-size: cover;
+    color: #0b212e;
 }
 
 /* Header */
 header{
-    color: #35424a;
     padding-right: 25px;
-    padding-top: 1px;
 }
 
 #Elements{
@@ -24,21 +15,19 @@ header{
     letter-spacing: 3px;
     word-spacing: 10px;
     margin-right: 9px;
-}
-
-#Elements2{
+    min-height: 400px;
     text-align: center;
-    letter-spacing: 3px;
-    word-spacing: 10px;
+    position: absolute; right: 20px; top: 1px; 
 }
 
-#Name{
+#Site{
     float: left;
-    color: #0b212e;
-    letter-spacing: 3px;
+    letter-spacing: 7px;
     word-spacing: 10px;
     padding-left: 50px;
-    text-decoration: none;
+    min-height: 400px;
+    text-align: center;
+    position: absolute; left: 0; top: 1px;
 }
 
 a{ 
@@ -50,14 +39,31 @@ a{
 
 a:hover{
     -webkit-transition: 0.5s ease;
-            transition: 0.5s ease;
+    transition: 0.5s ease;
     color: white;
 }
 
 /* Main */
-body{
-    min-height: 400px;
-    background: url('../shivamrsaheb.github.io/websitebackground.png') no-repeat 0 0px;
-    background-size: cover;
-    text-align: center;
+.ContactContainer{
+    padding-left: 100px;
+    position: absolute; top:70px;
+}
+
+.forminputs{
+    margin: 20px 0;
+    background-color:rgba(255,0,0,0.5);
+}
+
+.btn-start-order {
+	background: 0 0 #ffffff;
+    border: 1px solid #0b212e;
+    margin: 20px 0;
+    padding: 10px 35px;
+    text-transform: uppercase;
+    transition: all 0.25s ease 0s;
+}
+.btn-start-order:hover,.btn-start-order:active, .btn-start-order:focus {
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+    color: red;
 }

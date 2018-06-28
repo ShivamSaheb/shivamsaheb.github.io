@@ -5,18 +5,16 @@
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
     <link rel="stylesheet" href="./index.css">
-
 </head>
 
+<section id="Site">
+    <h3>
+        <a href="shivamrsaheb.github.io">SHIVAM SAHEB </a>
+    </h3>
+</section>
+
 <body>
-
     <header>
-        <section id="Name">
-            <h3>
-                <a href="shivamrsaheb.github.io">SHIVAM SAHEB</a>
-            </h3>
-        </section>
-
         <section id="Elements">
             <h3>
                 <a href="about.html">About</a> |
@@ -28,6 +26,33 @@
             </h3>
         </section>
     </header>
+
+    <div class="ContactContainer">
+        <div>
+            <h2>Leave a Message</h2>
+        </div>
+        <div>
+            <div>
+                <form id="contact-form" class="form" action="ContactForm.php" method="POST" role="form">
+                    <div class="forminputs">
+                        <input type="text" cols="50" class="form-control" id="name" name="name" placeholder="Name" tabindex="1" required>
+                    </div>
+                    <div class="forminputs">
+                        <input type="email" cols="50" class="form-control" id="email" name="email" placeholder="Email" tabindex="2" required>
+                    </div>
+                    <div class="forminputs">
+                        <input type="text" cols="50" class="form-control" id="subject" name="subject" placeholder="Subject" tabindex="3">
+                    </div>
+                    <div class="forminputs">
+                        <textarea rows="5" cols="50" name="message" class="form-control" id="message" placeholder="Message..." tabindex="4" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn-start-order">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 </body>
 

@@ -35,16 +35,17 @@
             <div>
                 <form id="contact-form" class="form" action="ContactForm.php" method="POST" role="form">
                     <div class="forminputs">
-                        <input type="text" cols="50" class="form-control" id="name" name="name" placeholder="Name" tabindex="1" required>
+                        <input type="text" class="form-control" size="19" id="name" name="fname" placeholder="First Name*" tabindex="1" required>
+                        <input type="text" class="form-control" size="24" id="name" name="lname" placeholder="Last Name*" tabindex="2" required>
                     </div>
                     <div class="forminputs">
-                        <input type="email" cols="50" class="form-control" id="email" name="email" placeholder="Email" tabindex="2" required>
+                        <input type="email" class="form-control" size="48" id="email" name="email" placeholder="Email*" tabindex="3" required>
                     </div>
                     <div class="forminputs">
-                        <input type="text" cols="50" class="form-control" id="subject" name="subject" placeholder="Subject" tabindex="3">
+                        <input type="text" class="form-control" size="48" id="subject" name="subject" placeholder="Subject" tabindex="4">
                     </div>
                     <div class="forminputs">
-                        <textarea rows="5" cols="50" name="message" class="form-control" id="message" placeholder="Message..." tabindex="4" required></textarea>
+                        <textarea rows="5" cols="50" name="message" class="form-control" id="message" placeholder="What would you like to say?...*" tabindex="5" required></textarea>
                     </div>
                     <div>
                         <button type="submit" class="btn-start-order">Send Message</button>

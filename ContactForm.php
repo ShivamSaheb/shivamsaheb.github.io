@@ -1,5 +1,5 @@
 <?php
-/*
+
     // Message Vars
     $msg = '';
     $msgClass = '';
@@ -22,10 +22,7 @@
 
     }
 
-*/
-
-
-
+/*
 if (isset($_POST['Submit'])) {
     $Name = $_POST['Name'];
     $MailFrom = $_POST['Email'];
@@ -40,4 +37,10 @@ if (isset($_POST['Submit'])) {
     header("Location: index.php?mailsend");
     
 }
+
+*/
+
+
+
+
 ?>

@@ -1,5 +1,6 @@
 <?php
 
+/*
     // Message Vars
     $msg = '';
     $msgClass = '';
@@ -15,14 +16,17 @@
         // Check Required Fields
         if (!empty($name) && !empty($email) && !empty(message)){
             // Passed
+            $MailTo = "shivamsaheb@hotmail.com";
+            $Headers = "From: ".$MailFrom;
+            $txt= "You have received an email from ".$Name. ".\n\n".$Message;
         }   else {
             // Failed
             $msg = 'Please fill in all the required fields';
         }
 
     }
+*/
 
-/*
 if (isset($_POST['Submit'])) {
     $Name = $_POST['Name'];
     $MailFrom = $_POST['Email'];
@@ -38,7 +42,6 @@ if (isset($_POST['Submit'])) {
     
 }
 
-*/
 
 
 

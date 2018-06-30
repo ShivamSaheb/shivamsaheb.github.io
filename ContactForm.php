@@ -1,14 +1,31 @@
 <?php
+/*
+    // Message Vars
+    $msg = '';
+    $msgClass = '';
+
     // Check for Submission
     if(filter_has_var(INPUT_POST, 'submit')){
-        echo 'Submitted';
+        //Get Form Data
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $subject = $_POST['message'];
+        $message = $_POST['message'];
+
+        // Check Required Fields
+        if (!empty($name) && !empty($email) && !empty(message)){
+            // Passed
+        }   else {
+            // Failed
+            $msg = 'Please fill in all the required fields';
+        }
+
     }
 
+*/
 
 
 
-
-/*
 if (isset($_POST['Submit'])) {
     $Name = $_POST['Name'];
     $MailFrom = $_POST['Email'];
@@ -23,4 +40,4 @@ if (isset($_POST['Submit'])) {
     header("Location: index.php?mailsend");
     
 }
-*/
+?>

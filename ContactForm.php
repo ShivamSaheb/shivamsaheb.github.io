@@ -33,7 +33,7 @@ if (isset($_POST['Submit'])) {
     $Subject = $_POST['Subject'];
     $Message = $_POST['Message'];
 
-    $MailTo = "shivamsaheb@hotmail.com";
+    $MailTo = "shivamrsaheb@gmail.com";
     $Headers = "From: ".$MailFrom;
     $txt= "You have received an email from ".$Name. ".\n\n".$Message;
 

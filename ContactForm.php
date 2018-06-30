@@ -1,5 +1,14 @@
 <?php
+    // Check for Submission
+    if(filter_has_var(INPUT_POST, 'submit')){
+        echo 'Submitted';
+    }
 
+
+
+
+
+/*
 if (isset($_POST['Submit'])) {
     $Name = $_POST['Name'];
     $MailFrom = $_POST['Email'];
@@ -14,3 +23,4 @@ if (isset($_POST['Submit'])) {
     header("Location: index.php?mailsend");
     
 }
+*/

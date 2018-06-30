@@ -33,7 +33,7 @@
         </div>
         <div>
             <div>
-                <form id="contact-form" class="form" action="ContactForm.php" method="POST" role="form">
+                <form id="contact-form" class="form" action="<?php echo $_SERVER['PHP_SELF'], ?>">
                     <div class="forminputs">
                         <input type="text" class="form-control" size="19" id="name" name="fname" placeholder="First Name*" tabindex="1" required>
                         <input type="text" class="form-control" size="24" id="name" name="lname" placeholder="Last Name*" tabindex="2" required>

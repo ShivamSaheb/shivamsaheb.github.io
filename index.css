@@ -4,18 +4,17 @@
     padding-right: 150px;
     padding-bottom: 180px;
     position: absolute; right: 20px; bottom: 1px;
-    font-size: 35px;
+    font-size: 40px;
 }
 
 #Site{
-    float: left;
     letter-spacing: 7px;
-    word-spacing: 10px;
     padding-left: 20px;
+    word-spacing: 10px;
     min-height: 400px;
     text-align: center;
     position: absolute; left: 0; top: 215px;
-    font-size: 22px;
+    font-size: 30px;
 }
 
 a{

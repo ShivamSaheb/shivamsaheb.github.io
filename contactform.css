@@ -68,3 +68,29 @@ a:hover{
     color: #0b212e;
     background: white;
 }
+
+.column {
+    float: left;
+    width: 25%;
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#aboutheadings {
+    text-align: center;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    text-transform: uppercase;
+}
+
+#aboutparas {
+    text-align: justify;
+    line-height: 2;
+}

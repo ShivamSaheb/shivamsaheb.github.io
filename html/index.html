@@ -1,10 +1,15 @@
-<html>
-
+<html class = "bg">
 <head>
     <title> Shivam </title>
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" type="image/ico" href="../Extras/favicon.ico">
     <link rel="stylesheet" href="../css/index.css">
+
+    <script>
+        function about() {
+            document.getElementsByClassName("bg")[0].setAttribute("class", "")
+        }
+    </script>
 </head>
 
 <section id="Site">
@@ -18,7 +23,8 @@
         <section id="Elements">
             <h3>
                 <div>
-                    <a href="../html/about"> About</a>
+                <!-- <a href="../html/about"> About</a> -->
+                    <a onclick="about()"> About</a>
                 </div>
                 <div>
                     <a href="../pdf/portfolio.pdf"> Portfolio</a>

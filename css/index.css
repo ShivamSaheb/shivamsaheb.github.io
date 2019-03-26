@@ -1,14 +1,19 @@
 html { 
+    background-color: coral;
+    font:15px Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+    transition: background-color 3s ease;
+  }
+  
+.bg {
     background: url('../images/spacestation.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    font:15px Arial, Helvetica, sans-serif;
-    scroll-behavior: smooth;
-    overflow-y: hidden;
-  }
-  
+}
+
   #Elements{
       letter-spacing: 8px;
       min-height: 400px;

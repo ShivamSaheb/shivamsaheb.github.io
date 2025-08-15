@@ -9,35 +9,15 @@
     <link rel="shortcut icon" href="../Extras/favicon.ico" type="image/ico">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/style.css">
-
-    <script>
-        function about() {
-            document.getElementsByClassName("bg")[0].setAttribute("class", "")
-        }
-
-        // Check URL parameters for countdown trigger
-        window.onload = function() {
-            const params = new URLSearchParams(window.location.search);
-            const fromAbout = params.get("from") === "about";
-
-            if (fromAbout) {
-                // Redirect to root redirect.html page for 5-second countdown
-                window.location.href = "../redirect.html?from=about";
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-    <!-- Site Header / Logo -->
     <section id="Site">
         <h3>
-            <!-- Logo: triggers countdown if from About page -->
             <a href="../redirect.html?from=about">SHIVAM SAHEB</a>
         </h3>
     </section>
 
-    <!-- Navigation -->
     <header>
         <section id="Elements">
             <h3>
@@ -50,7 +30,6 @@
         </section>
     </header>
 
-    <!-- JS -->
     <script src="../js/index.js"></script>
 </body>
 </html>

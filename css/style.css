@@ -1,4 +1,6 @@
-/* Global */
+/* ==============================
+   Global
+   ============================== */
 html { 
   font: 15px Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
@@ -11,13 +13,17 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Homepage background */
+/* ==============================
+   Homepage background
+   ============================== */
 .bg {
   background: url('../images/spacestation.jpg') no-repeat center center fixed; 
   background-size: cover;
 }
 
-/* Navigation & header */
+/* ==============================
+   Navigation & header
+   ============================== */
 #Elements {
   letter-spacing: 8px;
   min-height: 400px;
@@ -40,18 +46,38 @@ body {
   font-size: 25px;
 }
 
+/* Links */
 a {
   color: gold; 
   text-decoration: none; 
   text-transform: uppercase; 
+  transition: color 0.5s ease; /* Smooth hover like About page */
 }
 
 a:hover {
-  transition: 0.5s ease;
   color: white;
 }
 
-/* About page */
+/* Homepage buttons */
+.btn-start-order {
+  background: transparent;
+  border: 1px solid #0b212e;
+  margin: 10px 90px;
+  padding: 10px 35px;
+  text-transform: uppercase;
+  transition: all 0.5s ease; /* Smooth hover effect */
+}
+
+.btn-start-order:hover,
+.btn-start-order:active,
+.btn-start-order:focus {
+  color: #0b212e;
+  background: white;
+}
+
+/* ==============================
+   About page
+   ============================== */
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -60,7 +86,7 @@ a:hover {
 }
 
 .column {
-  flex: 1 1 300px;
+  flex: 1 1 300px; /* Ensures responsive scaling */
   padding: 20px;
 }
 
@@ -71,15 +97,19 @@ a:hover {
 
 #aboutparas {
   font-size: 15px;
+  margin-top: 10px;
 }
 
-/* Redirect page */
+/* ==============================
+   Redirect page
+   ============================== */
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   text-align: center;
+  background: white;
 }
 
 .container h1 {

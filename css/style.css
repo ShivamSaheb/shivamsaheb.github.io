@@ -1,0 +1,120 @@
+/* ---------- Global HTML & Body Styling ---------- */
+html { 
+    background-color: coral;
+    font: 15px Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+    transition: background-color 3s ease;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* ---------- Background Class ---------- */
+.bg {
+    background: url('../images/spacestation.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* ---------- Site Header & Navigation ---------- */
+#Elements {
+    letter-spacing: 8px;
+    min-height: 400px;
+    padding-right: 130px;
+    padding-bottom: 180px;
+    position: absolute;
+    right: 20px;
+    bottom: 1px;
+    font-size: 40px;
+}
+
+#Site {
+    letter-spacing: 15px;
+    min-height: 400px;
+    padding-right: 70px;
+    padding-bottom: 100px;
+    position: absolute;
+    right: 20px;
+    bottom: -330px;
+    font-size: 25px;
+}
+
+a {
+    color: gold; 
+    text-decoration: none; 
+    text-transform: uppercase; 
+}
+
+a:hover {
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+    color: white;
+}
+
+/* ---------- Form / About Page Styling ---------- */
+.ContactContainer {
+    padding-left: 125px;
+    position: absolute; 
+    top: 90px;
+}
+
+.forminputs {
+    margin: 30px 0;
+}
+
+#name, #email, #subject, #message {
+    border: 1px solid #0b212e;
+    border-style: none none solid none;
+    outline: 0;
+    background: transparent;
+}
+
+::placeholder {
+    color: rgb(14, 52, 66);
+    opacity: 1;
+}
+
+.btn-start-order {
+    background: transparent;
+    border: 1px solid #0b212e;
+    margin: 10px 90px;
+    padding: 10px 35px;
+    text-transform: uppercase;
+    transition: all 0.25s ease 0s;
+}
+
+.btn-start-order:hover,
+.btn-start-order:active,
+.btn-start-order:focus {
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+    color: #0b212e;
+    background: white;
+}
+
+/* ---------- Redirect Page Styling ---------- */
+.container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    font-size: 1.1em;
+}

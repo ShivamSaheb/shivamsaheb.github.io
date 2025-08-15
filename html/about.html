@@ -1,50 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Shivam</title>
-  <link rel="shortcut icon" href="../Extras/favicon.ico" type="image/ico">
-  <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivam - About</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../Extras/favicon.ico" type="image/ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/contactform.css">
+    <style>
+        /* About page layout */
+        .about-container {
+            display: flex;
+            flex-wrap: wrap; /* Allows columns to stack on narrow screens */
+            gap: 20px;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .column {
+            flex: 1 1 300px; /* Min width 300px, grow/shrink as needed */
+            background: rgba(0,0,0,0.05); /* Optional slight background for contrast */
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .about-heading {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .about-paragraph {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        /* Keep the header navigation consistent */
+        #Elements h3 a {
+            color: gold;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin-right: 15px;
+        }
+
+        #Elements h3 a:hover {
+            color: white;
+            transition: 0.5s ease;
+        }
+
+        #Site h3 a {
+            color: gold;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        #Site h3 a:hover {
+            color: white;
+            transition: 0.5s ease;
+        }
+    </style>
 </head>
 <body>
-  <section id="Site">
-    <h3>
-      <a href="../redirect.html?from=about">SHIVAM SAHEB</a>
-    </h3>
-  </section>
-
-  <header>
-    <section id="Elements">
-      <h3>
-        <a href="about.html">About</a> |
-        <a href="about.html">Portfolio</a> |
-        <a href="about.html">LinkedIn</a> |
-        <a href="about.html">Music</a> |
-        <a href="about.html">Contact</a>
-      </h3>
+    <!-- Site Header / Logo -->
+    <section id="Site">
+        <h3>
+            <!-- Clicking triggers 5-second countdown redirect -->
+            <a href="../redirect.html?from=about">SHIVAM SAHEB</a>
+        </h3>
     </section>
-  </header>
 
-  <div class="row">
-    <div class="column">
-      <p id="aboutheadings">About</p>
-      <p id="aboutparas"></p>
-      <p id="aboutparas"></p>
-      <p id="aboutparas"></p>
+    <!-- Navigation -->
+    <header>
+        <section id="Elements">
+            <h3>
+                <a href="about.html">About</a> |
+                <a href="about.html">Portfolio</a> |
+                <a href="about.html">LinkedIn</a> |
+                <a href="about.html">Music</a> |
+                <a href="about.html">Contact</a>
+            </h3>
+        </section>
+    </header>
+
+    <!-- Content -->
+    <div class="about-container">
+        <div class="column">
+            <p class="about-heading">About</p>
+            <p class="about-paragraph"></p>
+            <p class="about-paragraph"></p>
+            <p class="about-paragraph"></p>
+        </div>
+        <div class="column">
+            <p class="about-heading">Present</p>
+            <p class="about-paragraph"></p>
+            <p class="about-paragraph"></p>
+        </div>
+        <div class="column">
+            <p class="about-heading">Future</p>
+            <p class="about-paragraph"></p>
+            <p class="about-paragraph"></p>
+            <p class="about-paragraph"></p>
+            <p class="about-paragraph"></p>
+        </div>
     </div>
-    <div class="column">
-      <p id="aboutheadings">Present</p>
-      <p id="aboutparas"></p>
-      <p id="aboutparas"></p>
-    </div>
-    <div class="column">
-      <p id="aboutheadings">Future</p>
-      <p id="aboutparas"></p>
-      <p id="aboutparas"></p>
-      <p id="aboutparas"></p>
-      <p id="aboutparas"></p>
-    </div>
-  </div>
 </body>
 </html>

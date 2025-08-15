@@ -1,1 +1,48 @@
-<!DOCTYPE html> <html class="bg" lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Shivam</title> <!-- Favicon --> <link rel="shortcut icon" href="../Extras/favicon.ico" type="image/ico"> <!-- CSS --> <link rel="stylesheet" href="../css/index.css"> <script> function about() { document.getElementsByClassName("bg")[0].setAttribute("class", "") } // Check URL parameters for countdown trigger window.onload = function() { const params = new URLSearchParams(window.location.search); const fromAbout = params.get("from") === "about"; if (fromAbout) { // Redirect to root redirect.html page for 5-second countdown window.location.href = "../redirect.html?from=about"; } } </script> </head> <body> <!-- Site Header / Logo --> <section id="Site"> <h3> <!-- Logo: clicking triggers countdown only if from About page --> <a href="../redirect.html?from=about">SHIVAM SAHEB</a> </h3> </section> <header> <section id="Elements"> <h3> <div><a href="about.html">About</a></div> <div><a href="about.html">Portfolio</a></div> <div><a href="about.html">LinkedIn</a></div> <div><a href="about.html">Music</a></div> <div><a href="about.html">Contact</a></div> </h3> </section> </header> <!-- JS --> <script src="../js/index.js"></script> </body> </html>
+<html class="bg">
+
+<head>
+    <title> Shivam </title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" type="image/ico" href="../Extras/favicon.ico">
+    <link rel="stylesheet" href="../css/index.css">
+
+    <script>
+        function about() {
+            document.getElementsByClassName("bg")[0].setAttribute("class", "")
+        }
+    </script>
+</head>
+
+<section id="Site">
+    <h3>
+        <a href="../html/">SHIVAM SAHEB </a>
+    </h3>
+</section>
+
+<body>
+    <header>
+        <section id="Elements">
+            <h3>
+                <div>
+                    <a href="../html/about"> About</a>
+                    <!--     <a onclick="about()"> About</a> -->
+                </div>
+                <div>
+                    <a href="shivamsaheb.github.io"> Portfolio</a>
+                </div>
+                <div>
+                    <a href="shivamsaheb.github.io" target="_blank"> linkedin</a>
+                </div>
+                <div>
+                    <a href="shivamsaheb.github.io" target="_blank"> Music</a>
+                </div>
+                <div>
+                    <a href="shivamsaheb.github.io">Contact</a>
+                </div>
+            </h3>
+        </section>
+    </header>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

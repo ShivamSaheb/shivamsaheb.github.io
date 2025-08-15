@@ -1,21 +1,32 @@
-/* Elements section (Enter) - bottom right */
-#Elements {
-    position: fixed;
-    bottom: clamp(100px, 12vh, 140px);  /* scales with viewport height */
-    right: clamp(20px, 5vw, 40px);      /* scales with viewport width */
-    letter-spacing: clamp(2px, 0.5vw, 8px); /* responsive spacing */
-    font-size: clamp(20px, 4vw, 40px);
-    text-align: right;
+html { 
+    background-color: coral;
+    font: 15px Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+    transition: background-color 3s ease;
 }
 
-/* Name section (Shivam Saheb) - bottom right */
+.bg {
+    background: url('../images/spacestation.jpg') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+/* Elements section (buttons) - bottom left */
+#Elements {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    letter-spacing: 0.5vw;
+    font-size: clamp(20px, 4vw, 40px);
+}
+
+/* Name section - slightly above Elements */
 #Site {
     position: fixed;
-    bottom: clamp(20px, 4vh, 40px);     /* scales with viewport height */
-    right: clamp(20px, 5vw, 40px);      /* scales with viewport width */
-    letter-spacing: clamp(4px, 1vw, 15px); /* responsive spacing */
+    bottom: 100px; /* Sits above the buttons */
+    left: 40px;
+    letter-spacing: 1vw;
     font-size: clamp(16px, 2.5vw, 25px);
-    text-align: right;
 }
 
 #Site a {

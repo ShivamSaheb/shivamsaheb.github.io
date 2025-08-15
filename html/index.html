@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html class="bg" lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,19 +22,18 @@
             const fromAbout = params.get("from") === "about";
 
             if (fromAbout) {
-                // Redirect to root index.html for 5-second countdown
-                window.location.href = "../index.html?from=about";
+                // Redirect to root redirect.html page for 5-second countdown
+                window.location.href = "../redirect.html?from=about";
             }
         }
     </script>
 </head>
-
 <body>
     <!-- Site Header / Logo -->
     <section id="Site">
         <h3>
             <!-- Logo: clicking triggers countdown only if from About page -->
-            <a href="../index.html?from=about">SHIVAM SAHEB</a>
+            <a href="../redirect.html?from=about">SHIVAM SAHEB</a>
         </h3>
     </section>
 
@@ -54,5 +52,4 @@
     <!-- JS -->
     <script src="../js/index.js"></script>
 </body>
-
 </html>

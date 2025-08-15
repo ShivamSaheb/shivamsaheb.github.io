@@ -11,30 +11,22 @@ html {
     background-size: cover;
 }
 
-/* Container to lock elements in place responsively */
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-/* Elements section (buttons) */
+/* Elements section (buttons) - bottom left */
 #Elements {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
     letter-spacing: 0.5vw;
     font-size: clamp(20px, 4vw, 40px);
-    text-align: center;
-    margin-top: 2vh;
 }
 
-/* Name section */
+/* Name section - slightly above Elements */
 #Site {
+    position: fixed;
+    bottom: 100px; /* Sits above the buttons */
+    left: 40px;
     letter-spacing: 1vw;
     font-size: clamp(16px, 2.5vw, 25px);
-    margin-bottom: 4vh;
-    text-align: center;
 }
 
 #Site a {

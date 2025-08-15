@@ -1,14 +1,12 @@
-// Function to remove background class (visual effect)
+// Function to remove background class
 function about() {
-    document.getElementsByClassName("bg")[0].setAttribute("class", "")
+    document.getElementsByClassName("bg")[0].setAttribute("class", "");
 }
 
-// Redirect countdown only if user clicked logo from About page
+// 5-second redirect if logo clicked from About page
 window.onload = function() {
     const params = new URLSearchParams(window.location.search);
-    const fromAbout = params.get("from") === "about";
-
-    if (fromAbout) {
+    if (params.get("from") === "about") {
         window.location.href = "../redirect.html?from=about";
     }
 }

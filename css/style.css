@@ -1,4 +1,4 @@
-/* ---------- Global HTML & Body Styling ---------- */
+/* ---------------- Main site styling ---------------- */
 html { 
     background-color: coral;
     font: 15px Arial, Helvetica, sans-serif;
@@ -7,17 +7,6 @@ html {
     transition: background-color 3s ease;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-/* ---------- Background Class ---------- */
 .bg {
     background: url('../images/spacestation.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -26,7 +15,6 @@ body {
     background-size: cover;
 }
 
-/* ---------- Site Header & Navigation ---------- */
 #Elements {
     letter-spacing: 8px;
     min-height: 400px;
@@ -61,7 +49,7 @@ a:hover {
     color: white;
 }
 
-/* ---------- Form / About Page Styling ---------- */
+/* ---------------- Form / About page styling ---------------- */
 .ContactContainer {
     padding-left: 125px;
     position: absolute; 
@@ -93,16 +81,24 @@ a:hover {
     transition: all 0.25s ease 0s;
 }
 
-.btn-start-order:hover,
-.btn-start-order:active,
-.btn-start-order:focus {
+.btn-start-order:hover, .btn-start-order:active, .btn-start-order:focus {
     -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
     color: #0b212e;
     background: white;
 }
 
-/* ---------- Redirect Page Styling ---------- */
+/* ---------------- Redirect page styling ---------------- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
 .container {
     text-align: center;
     background: white;

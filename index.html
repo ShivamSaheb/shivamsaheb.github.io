@@ -4,41 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirecting...</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding-top: 50px;
-    }
-    .countdown {
-      font-weight: bold;
-      color: #d9534f;
-    }
-  </style>
+  <link rel="stylesheet" href="css/redirect.css">
 </head>
 <body>
-  <h1>Redirecting...</h1>
-  <p>You will be redirected in <span class="countdown" id="countdown">5</span> seconds.</p>
-  <p>If not, <a href="html/index.html">click here</a>.</p>
+  <div class="container">
+    <h1>Redirecting...</h1>
+    <p>You will be redirected in <span id="countdown">5</span> seconds.</p>
+    <p>If you are not redirected automatically, <a href="html/index.html">click here</a>.</p>
+  </div>
 
-  <script>
-    let seconds = 5;
-    const countdownElement = document.getElementById("countdown");
-
-    const timer = setInterval(() => {
-      seconds--;
-      countdownElement.textContent = seconds;
-      if (seconds <= 0) {
-        clearInterval(timer);
-        window.location.href = "html/index.html";
-      }
-    }, 1000);
-  </script>
+  <script src="js/redirect.js"></script>
 </body>
 </html>
-
-
-
-
-<!-- For organizational purposes, html, css, and js files were moved to html, css, and js folders.
-     This file was created as a dummy file to redirect to the actual index file located within the html subfolder  -->

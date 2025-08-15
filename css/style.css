@@ -1,4 +1,3 @@
-/* ---------------- Main site styling ---------------- */
 html { 
     background-color: coral;
     font: 15px Arial, Helvetica, sans-serif;
@@ -9,9 +8,6 @@ html {
 
 .bg {
     background: url('../images/spacestation.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
@@ -44,73 +40,34 @@ a {
 }
 
 a:hover {
-    -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
     color: white;
 }
 
-/* ---------------- Form / About page styling ---------------- */
-.ContactContainer {
-    padding-left: 125px;
-    position: absolute; 
-    top: 90px;
-}
-
-.forminputs {
-    margin: 30px 0;
-}
-
-#name, #email, #subject, #message {
-    border: 1px solid #0b212e;
-    border-style: none none solid none;
-    outline: 0;
-    background: transparent;
-}
-
-::placeholder {
-    color: rgb(14, 52, 66);
-    opacity: 1;
-}
-
-.btn-start-order {
-    background: transparent;
-    border: 1px solid #0b212e;
-    margin: 10px 90px;
-    padding: 10px 35px;
-    text-transform: uppercase;
-    transition: all 0.25s ease 0s;
-}
-
-.btn-start-order:hover, .btn-start-order:active, .btn-start-order:focus {
-    -webkit-transition: 0.5s ease;
-    transition: 0.5s ease;
-    color: #0b212e;
-    background: white;
-}
-
-/* ---------------- Redirect page styling ---------------- */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .container {
-    text-align: center;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-h1 {
-    color: #333;
-}
+h1 { color: #333; }
+p { font-size: 1.1em; }
 
-p {
-    font-size: 1.1em;
-}
+.ContactContainer { padding-left: 125px; position: absolute; top:90px; }
+.forminputs { margin: 30px 0; }
+#name, #email, #subject, #message { border: none; border-bottom:1px solid #0b212e; outline:0; background:transparent; }
+::placeholder { color: rgb(14,52,66); opacity:1; }
+.btn-start-order { background:transparent; border:1px solid #0b212e; margin:10px 90px; padding:10px 35px; text-transform:uppercase; transition:all 0.25s ease 0s; }
+.btn-start-order:hover,.btn-start-order:active,.btn-start-order:focus { color:#0b212e; background:white; transition:0.5s ease; }

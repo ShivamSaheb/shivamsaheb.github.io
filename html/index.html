@@ -6,23 +6,13 @@
     <title>Shivam</title>
     <link rel="shortcut icon" href="../Extras/favicon.ico" type="image/ico">
     <link rel="stylesheet" href="../css/style.css">
-
-    <script>
-        function about() {
-            document.getElementsByClassName("bg")[0].setAttribute("class", "")
-        }
-
-        window.onload = function() {
-            const params = new URLSearchParams(window.location.search);
-            if (params.get("from") === "about") {
-                window.location.href = "../redirect.html?from=about";
-            }
-        }
-    </script>
+    <script src="../js/index.js"></script>
 </head>
 <body>
     <section id="Site">
-        <h3><a href="../redirect.html?from=about">SHIVAM SAHEB</a></h3>
+        <h3>
+            <a href="../index.html?from=about">SHIVAM SAHEB</a>
+        </h3>
     </section>
 
     <header>
@@ -36,7 +26,5 @@
             </h3>
         </section>
     </header>
-
-    <script src="../js/index.js"></script>
 </body>
 </html>

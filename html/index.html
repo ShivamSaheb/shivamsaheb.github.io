@@ -16,6 +16,17 @@
         function about() {
             document.getElementsByClassName("bg")[0].setAttribute("class", "")
         }
+
+        // Check URL parameters for countdown trigger
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const fromAbout = params.get("from") === "about";
+
+            if (fromAbout) {
+                // Redirect to root index.html for 5-second countdown
+                window.location.href = "../index.html?from=about";
+            }
+        }
     </script>
 </head>
 
@@ -23,7 +34,8 @@
     <!-- Site Header / Logo -->
     <section id="Site">
         <h3>
-            <a href="index.html">SHIVAM SAHEB</a>
+            <!-- Logo: clicking triggers countdown only if from About page -->
+            <a href="../index.html?from=about">SHIVAM SAHEB</a>
         </h3>
     </section>
 

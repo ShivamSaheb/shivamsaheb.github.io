@@ -23,7 +23,7 @@ html {
 /* Name section - slightly above Elements */
 #Site {
     position: fixed;
-    bottom: 100px; /* Sits above the buttons */
+    bottom: 80px; /* Sits above the buttons */
     right: 125px;
     letter-spacing: 1vw;
     font-size: clamp(16px, 2.5vw, 25px);

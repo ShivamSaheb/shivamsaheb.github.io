@@ -15,7 +15,7 @@ html {
 #Elements {
     position: fixed;
     bottom: 200px;
-    right: 100px;
+    right: 125px;
     letter-spacing: 0.5vw;
     font-size: clamp(20px, 4vw, 40px);
 }
@@ -24,7 +24,7 @@ html {
 #Site {
     position: fixed;
     bottom: 100px; /* Sits above the buttons */
-    right: 100px;
+    right: 125px;
     letter-spacing: 1vw;
     font-size: clamp(16px, 2.5vw, 25px);
 }

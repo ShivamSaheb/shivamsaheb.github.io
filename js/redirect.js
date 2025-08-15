@@ -11,6 +11,6 @@ const timer = setInterval(() => {
 
   if (countdownTime <= 0) {
     clearInterval(timer);
-    window.location.href = "html/index.html"; // Redirect
+    window.location.href = "html/index.html"; // Redirect to main site
   }
 }, 1000);

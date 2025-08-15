@@ -32,4 +32,26 @@
     <script src="../js/index.js"></script>
 </body>
 
+    <audio id="bg-music" src="../Extras/PER.mp3"></audio>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const audio = document.getElementById('bg-music');
+
+    // Try autoplay (will only work if browser allows)
+    audio.play().catch(() => {
+        console.log("Autoplay blocked — waiting for user click");
+        // Show a button to start music
+        let btn = document.createElement('button');
+        btn.textContent = "Play Music";
+        btn.style.cssText = "position:fixed;top:20px;left:20px;padding:10px;font-size:16px;z-index:9999;";
+        btn.onclick = function() {
+            audio.play();
+            btn.remove();
+        };
+        document.body.appendChild(btn);
+    });
+});
+</script>
+
 </html>

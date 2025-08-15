@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shivam</title>
-
-    <!-- Favicon -->
     <link rel="shortcut icon" href="../Extras/favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="../css/style.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/index.css">
+    <script>
+        function about() {
+            document.getElementsByClassName("bg")[0].setAttribute("class", "")
+        }
+
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            if (params.get("from") === "about") {
+                window.location.href = "../redirect.html?from=about";
+            }
+        }
+    </script>
 </head>
 <body>
     <section id="Site">
-        <h3>
-            <a href="../redirect.html?from=about">SHIVAM SAHEB</a>
-        </h3>
+        <h3><a href="../redirect.html?from=about">SHIVAM SAHEB</a></h3>
     </section>
 
     <header>

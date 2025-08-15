@@ -1,31 +1,25 @@
-/* Redirect page styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .container {
-    text-align: center;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: #333;
+  color: #333;
 }
 
 p {
-    font-size: 1.1em;
-}
-
-.countdown {
-    font-weight: bold;
-    color: #d9534f;
+  font-size: 1.1em;
 }

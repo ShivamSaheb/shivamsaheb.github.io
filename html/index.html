@@ -1,49 +1,47 @@
 <html class="bg">
-
 <head>
-    <title> Shivam </title>
+    <title>Shivam</title>
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" type="image/ico" href="../Extras/favicon.ico">
     <link rel="stylesheet" href="../css/index.css">
-
-    <script>
-        function about() {
-            document.getElementsByClassName("bg")[0].setAttribute("class", "")
-        }
-    </script>
 </head>
 
-<section id="Site">
-    <a href="../html/" class="site-link">
-        <h3>SHIVAM SAHEB</h3>
-    </a>
-</section>
-
 <body>
+    <section id="Site">
+        <a href="../html/" class="site-link">
+            <h3>SHIVAM SAHEB</h3>
+        </a>
+    </section>
+
     <header>
         <section id="Elements">
             <h3>
                 <div>
-                    <a href="../html/about""> enter</a>
+                    <a id="enterButton" href="../html/about">enter</a>
                 </div>
             </h3>
         </section>
     </header>
+
+    <audio id="bgMusic" src="../Extras/PER.mp3" loop></audio>
+
     <script src="../js/index.js"></script>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const audio = document.getElementById("bgMusic");
+
+            function playAudio(e) {
+                // Skip if clicked Enter button
+                if (!e.target.closest("#enterButton")) {
+                    audio.volume = 0.8;
+                    audio.play().catch(err => console.log("Playback blocked:", err));
+                    window.removeEventListener("click", playAudio);
+                }
+            }
+
+            window.addEventListener("click", playAudio);
+        });
+    </script>
 </body>
-
-<audio id="bgMusic" src="extras/PER.mp3" loop></audio>
-
-<script>
-document.addEventListener("click", function(e) {
-    // Replace 'enterButton' with the actual ID of your Enter button
-    if (!e.target.closest("#enterButton")) {
-        let audio = document.getElementById("bgMusic");
-        audio.volume = 0.8;
-        audio.play().catch(err => console.log("Playback failed:", err));
-        document.removeEventListener("click", arguments.callee);
-    }
-});
-</script>
-
 </html>

@@ -17,8 +17,8 @@ html {
   #Elements{
       letter-spacing: 8px;
       min-height: 400px;
-      padding-right: 140px;
-      padding-bottom: 190px;
+      padding-right: 160px;
+      padding-bottom: 200px;
       position: absolute; right: 20px; bottom: 1px;
       font-size: 40px;
   }

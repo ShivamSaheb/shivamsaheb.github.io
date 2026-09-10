@@ -7,6 +7,11 @@
 </head>
 
 <body>
+
+    <!-- Cinematic intro overlay -->
+    <div id="intro"></div>
+
+    <!-- Main landing page -->
     <section id="Site">
         <a href="../html/" class="site-link">
             <h3>SHIVAM SAHEB</h3>
@@ -27,21 +32,5 @@
 
     <script src="../js/index.js"></script>
 
-    <script>
-        window.addEventListener("DOMContentLoaded", () => {
-            const audio = document.getElementById("bgMusic");
-
-            function playAudio(e) {
-                // Skip if clicked Enter button
-                if (!e.target.closest("#enterButton")) {
-                    audio.volume = 0.8;
-                    audio.play().catch(err => console.log("Playback blocked:", err));
-                    window.removeEventListener("click", playAudio);
-                }
-            }
-
-            window.addEventListener("click", playAudio);
-        });
-    </script>
 </body>
 </html>

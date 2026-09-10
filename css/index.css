@@ -1,8 +1,4 @@
 ```css
-/* =========================================================
-   GLOBAL
-   ========================================================= */
-
 html {
     background: black;
     font: 15px Arial, Helvetica, sans-serif;
@@ -17,16 +13,12 @@ body {
 }
 
 
-/* =========================================================
-   LANDING SECTION
-   ========================================================= */
+/* LANDING */
 
 #landing {
     position: relative;
-
     width: 100vw;
     height: 100vh;
-
     overflow: hidden;
 
     background:
@@ -44,13 +36,8 @@ body {
 }
 
 
-/* =========================================================
-   INITIAL BLACK SCREEN
-   ========================================================= */
-
 #intro {
     position: absolute;
-
     top: 0;
     left: 0;
 
@@ -60,16 +47,13 @@ body {
     background: black;
 
     z-index: 100;
-
     pointer-events: none;
 
     animation: introFade 3.2s ease forwards;
 }
 
 
-/* =========================================================
-   LANDING - SHIVAM SAHEB
-   ========================================================= */
+/* LANDING NAME */
 
 #Site {
     position: absolute;
@@ -88,7 +72,6 @@ body {
     animation: nameReveal 1.4s ease-out 1.8s forwards;
 }
 
-
 #Site a {
     display: inline-block;
     width: 100%;
@@ -96,9 +79,7 @@ body {
 }
 
 
-/* =========================================================
-   LANDING - ENTER
-   ========================================================= */
+/* ENTER */
 
 #Elements {
     position: absolute;
@@ -118,15 +99,12 @@ body {
 }
 
 
-/* =========================================================
-   LANDING LINKS
-   ========================================================= */
+/* LANDING LINKS */
 
 #landing a {
     color: gold;
 
     text-decoration: none;
-
     text-transform: uppercase;
 
     transition:
@@ -134,27 +112,21 @@ body {
         letter-spacing 0.5s ease;
 }
 
-
 #landing a:hover {
     color: white;
 }
-
 
 #enterButton:hover {
     letter-spacing: 0.8vw;
 }
 
 
-/* =========================================================
-   ABOUT SECTION
-   ========================================================= */
+/* ABOUT */
 
 #about {
-
     position: relative;
 
     width: 100vw;
-
     min-height: 100vh;
 
     box-sizing: border-box;
@@ -174,16 +146,10 @@ body {
     color: #0b212e;
 
     overflow: hidden;
-
-    opacity: 0;
-
-    transition: opacity 1s ease;
 }
 
 
-/* =========================================================
-   ABOUT - TOP LEFT SITE NAME
-   ========================================================= */
+/* ABOUT SITE NAME */
 
 #AboutSite {
     float: left;
@@ -198,23 +164,18 @@ body {
     text-align: center;
 
     position: absolute;
-
     left: 0;
     top: 1px;
 }
-
 
 #AboutSite h3 {
     margin: 1em 0;
 }
 
 
-/* =========================================================
-   ABOUT - NAVIGATION
-   ========================================================= */
+/* ABOUT NAVIGATION */
 
 #AboutElements {
-
     letter-spacing: 3px;
     word-spacing: 5px;
 
@@ -225,30 +186,23 @@ body {
     text-align: center;
 
     position: absolute;
-
     right: 20px;
     top: 1px;
 }
 
 
-/* =========================================================
-   ABOUT LINKS
-   ========================================================= */
+/* ABOUT LINKS */
 
 #about a {
-
     color: #0b212e;
 
     text-decoration: none;
-
     text-transform: uppercase;
 
     font-size: 16px;
 }
 
-
 #about a:hover {
-
     -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
 
@@ -256,12 +210,9 @@ body {
 }
 
 
-/* =========================================================
-   ABOUT COLUMNS
-   ========================================================= */
+/* COLUMNS */
 
 .column {
-
     float: left;
 
     width: 25%;
@@ -273,10 +224,9 @@ body {
 }
 
 
-/* Clear floats after columns */
+/* CLEAR FLOATS */
 
 .row:after {
-
     content: "";
 
     display: table;
@@ -285,16 +235,12 @@ body {
 }
 
 
-/* =========================================================
-   ABOUT HEADINGS
-   ========================================================= */
+/* ABOUT HEADINGS */
 
 #aboutheadings {
-
     text-align: center;
 
     letter-spacing: 5px;
-
     word-spacing: 10px;
 
     text-transform: uppercase;
@@ -303,12 +249,9 @@ body {
 }
 
 
-/* =========================================================
-   ABOUT PARAGRAPHS
-   ========================================================= */
+/* ABOUT PARAGRAPHS */
 
 #aboutparas {
-
     text-align: justify;
 
     line-height: 2;
@@ -317,18 +260,14 @@ body {
 }
 
 
-/* =========================================================
-   AUDIO
-   ========================================================= */
+/* AUDIO */
 
 #bgMusic {
     display: none;
 }
 
 
-/* =========================================================
-   ANIMATIONS
-   ========================================================= */
+/* ANIMATIONS */
 
 @keyframes introFade {
 
@@ -400,18 +339,7 @@ body {
 }
 
 
-/* =========================================================
-   ABOUT FADE
-   ========================================================= */
-
-body.about-visible #about {
-    opacity: 1;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
+/* MOBILE */
 
 @media (max-width: 700px) {
 
@@ -420,17 +348,14 @@ body.about-visible #about {
         bottom: 70px;
     }
 
-
     #Elements {
         right: 8vw;
         bottom: 160px;
     }
 
-
     #AboutSite {
         padding-left: 8vw;
     }
-
 
     #AboutElements {
         right: 8vw;
@@ -441,11 +366,9 @@ body.about-visible #about {
         line-height: 2;
     }
 
-
     .row {
         width: 100%;
     }
-
 
     .column {
         float: none;
@@ -457,6 +380,5 @@ body.about-visible #about {
 
         margin: 0 auto;
     }
-
 }
 ```

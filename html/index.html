@@ -1,39 +1,283 @@
+<!DOCTYPE html>
+
 <html class="bg">
 
 <head>
+
     <title>Shivam</title>
+
     <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" type="image/ico" href="../Extras/favicon.ico">
-    <link rel="stylesheet" href="../css/index.css">
+
+    <link
+        rel="shortcut icon"
+        type="image/ico"
+        href="../Extras/favicon.ico"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/index.css"
+    >
+
 </head>
+
 
 <body>
 
-    <!-- Black cinematic intro -->
-    <div id="intro"></div>
 
-    <!-- Site name -->
-    <section id="Site">
-        <a href="../html/" class="site-link">
-            <h3>SHIVAM SAHEB</h3>
-        </a>
+    <!-- =====================================================
+         LANDING SECTION
+         ===================================================== -->
+
+    <section id="landing">
+
+
+        <div id="intro"></div>
+
+
+        <section id="Site">
+
+            <a href="#landing" class="site-link">
+
+                <h3>
+                    SHIVAM SAHEB
+                </h3>
+
+            </a>
+
+        </section>
+
+
+        <header>
+
+            <section id="Elements">
+
+                <h3>
+
+                    <a
+                        id="enterButton"
+                        href="#about"
+                    >
+                        enter
+                    </a>
+
+                </h3>
+
+            </section>
+
+        </header>
+
+
     </section>
 
-    <!-- Enter -->
-    <header>
-        <section id="Elements">
-            <h3>
-                <div>
-                    <a id="enterButton" href="../html/about">enter</a>
-                </div>
-            </h3>
-        </section>
-    </header>
 
-    <!-- Background music -->
-    <audio id="bgMusic" src="../Extras/PER.mp3" preload="auto"></audio>
+
+    <!-- =====================================================
+         ABOUT SECTION
+         ===================================================== -->
+
+    <section id="about">
+
+
+        <section id="AboutSite">
+
+            <h3>
+
+                <a href="#landing">
+                    SHIVAM SAHEB
+                </a>
+
+            </h3>
+
+        </section>
+
+
+        <header>
+
+            <section id="AboutElements">
+
+                <h3>
+
+                    <a href="#about">
+                        About
+                    </a>
+
+                    |
+
+                    <a href="#about">
+                        Portfolio
+                    </a>
+
+                    |
+
+                    <a
+                        href="https://www.linkedin.com/in/shivamsaheb/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        linkedin
+                    </a>
+
+                    |
+
+                    <a
+                        href="https://soundcloud.com/therealshivam"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Music
+                    </a>
+
+                    |
+
+                    <a href="../html/contactform">
+                        Contact
+                    </a>
+
+                </h3>
+
+            </section>
+
+        </header>
+
+
+
+        <div class="row">
+
+
+            <!-- ABOUT -->
+
+            <div class="column">
+
+                <p
+                    class="aboutheadings"
+                    style="font-size:20px"
+                >
+                    About
+                </p>
+
+
+                <p
+                    class="aboutparas"
+                    style="font-size:15px"
+                >
+                </p>
+
+
+                <p
+                    class="aboutparas"
+                    style="font-size:15px"
+                >
+                </p>
+
+
+                <p
+                    class="aboutparas"
+                    style="font-size:15px"
+                >
+                </p>
+
+            </div>
+
+
+
+            <!-- PRESENT -->
+
+            <div class="column">
+
+                <p
+                    class="aboutheadings"
+                    style="font-size:20px"
+                >
+                    Present
+                </p>
+
+
+                <p
+                    class="aboutparas"
+                    style="font-size:15px"
+                >
+                </p>
+
+
+                <p
+                    class="aboutparas"
+                    style="font-size:15px"
+                >
+                </p>
+
+            </div>
+
+
+
+            <!-- FUTURE -->
+
+            <div class="column">
+
+                <p
+                    class="aboutheadings"
+                    style="font-size:20px"
+                >
+                    Future
+                </p>
+
+
+                <p
+                    class="aboutparas"
+                    style="font-size:15px"
+                >
+                </p>
+
+
+                <p
+                    class="aboutparas"
+                    style="font-size:15px"
+                >
+                </p>
+
+
+                <p
+                    class="aboutparas"
+                    style="font-size:15px"
+                >
+                </p>
+
+
+                <p
+                    class="aboutparas"
+                    style="font-size:15px"
+                >
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PERSISTENT AUDIO
+         
+         IMPORTANT:
+         This audio element belongs to the entire page.
+         It is NOT destroyed when moving to About.
+         ===================================================== -->
+
+    <audio
+        id="bgMusic"
+        src="../Extras/PER.mp3"
+        preload="auto"
+        loop
+    ></audio>
+
+
 
     <script src="../js/index.js"></script>
+
 
 </body>
 

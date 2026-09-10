@@ -1,33 +1,21 @@
+```javascript
 document.addEventListener("DOMContentLoaded", () => {
 
+    const audio = document.getElementById("bgMusic");
 
-    const audio =
-        document.getElementById("bgMusic");
+    const enterButton = document.getElementById("enterButton");
 
+    const landing = document.getElementById("landing");
 
-    const enterButton =
-        document.getElementById("enterButton");
+    const about = document.getElementById("about");
 
+    const landingName = document.querySelector("#Site a");
 
-    const landing =
-        document.getElementById("landing");
-
-
-    const about =
-        document.getElementById("about");
-
-
-    const homeLink =
-        document.querySelector("#Site a");
-
-
-    const aboutHomeLink =
-        document.querySelector("#AboutSite a");
-
+    const aboutName = document.querySelector("#AboutSite a");
 
 
     /* =====================================================
-       ENTER → START MUSIC + MOVE TO ABOUT
+       ENTER → START MUSIC + SCROLL TO ABOUT
        ===================================================== */
 
     enterButton.addEventListener("click", (event) => {
@@ -36,10 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         /*
-         * Start the music directly from the user's click.
-         *
-         * Because the audio element belongs to this page,
-         * it will continue playing while the page scrolls.
+         * The music begins directly from the user's click.
+         * Because this audio element belongs to the same page,
+         * it continues playing during the scroll.
          */
 
         if (audio) {
@@ -58,16 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        /*
-         * Mark the About section as active.
-         */
-
         document.body.classList.add("about-visible");
 
-
-        /*
-         * Smoothly scroll to About.
-         */
 
         about.scrollIntoView({
             behavior: "smooth",
@@ -77,20 +56,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-
     /* =====================================================
-       SHIVAM SAHEB → RETURN TO LANDING
+       LANDING NAME → RETURN TO TOP
        ===================================================== */
 
-    homeLink.addEventListener("click", (event) => {
+    landingName.addEventListener("click", (event) => {
 
         event.preventDefault();
 
-
-        document.body.classList.remove(
-            "about-visible"
-        );
-
+        document.body.classList.remove("about-visible");
 
         landing.scrollIntoView({
             behavior: "smooth",
@@ -100,20 +74,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-
     /* =====================================================
-       ABOUT SHIVAM SAHEB → RETURN TO LANDING
+       ABOUT NAME → RETURN TO TOP
        ===================================================== */
 
-    aboutHomeLink.addEventListener("click", (event) => {
+    aboutName.addEventListener("click", (event) => {
 
         event.preventDefault();
 
-
-        document.body.classList.remove(
-            "about-visible"
-        );
-
+        document.body.classList.remove("about-visible");
 
         landing.scrollIntoView({
             behavior: "smooth",
@@ -121,6 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     });
-
 
 });
+```

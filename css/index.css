@@ -5,10 +5,6 @@ html {
     overflow: hidden;
 }
 
-/* -------------------------------------------------
-   BACKGROUND
-------------------------------------------------- */
-
 .bg {
     background:
         url('../images/spacestation.jpg')
@@ -31,7 +27,6 @@ html {
 
 #intro {
     position: fixed;
-
     top: 0;
     left: 0;
 
@@ -41,7 +36,6 @@ html {
     background: black;
 
     z-index: 100;
-
     pointer-events: none;
 
     animation: introFade 3.2s ease forwards;
@@ -59,16 +53,13 @@ html {
     right: 125px;
 
     letter-spacing: 1vw;
-
     font-size: clamp(16px, 2.5vw, 25px);
 
     opacity: 0;
-
-    transform: translateY(20px);
+    transform: translateY(15px);
 
     animation:
-        nameReveal 1.5s cubic-bezier(.22, .61, .36, 1)
-        2.0s forwards;
+        nameReveal 1.4s ease-out 1.8s forwards;
 }
 
 
@@ -91,16 +82,13 @@ html {
     right: 125px;
 
     letter-spacing: 0.5vw;
-
     font-size: clamp(20px, 4vw, 40px);
 
     opacity: 0;
-
     transform: translateY(15px);
 
     animation:
-        enterReveal 1.2s ease
-        3.0s forwards;
+        enterReveal 1.2s ease 3.0s forwards;
 }
 
 
@@ -112,7 +100,6 @@ a {
     color: gold;
 
     text-decoration: none;
-
     text-transform: uppercase;
 
     transition:
@@ -125,8 +112,6 @@ a:hover {
     color: white;
 }
 
-
-/* Subtle movement when hovering ENTER */
 
 #enterButton:hover {
     letter-spacing: 0.8vw;
@@ -169,24 +154,12 @@ a:hover {
 
     0% {
         opacity: 0;
-
-        transform:
-            translateY(20px);
-
-        letter-spacing: 1.8vw;
-    }
-
-    60% {
-        opacity: 1;
+        transform: translateY(15px);
     }
 
     100% {
         opacity: 1;
-
-        transform:
-            translateY(0);
-
-        letter-spacing: 1vw;
+        transform: translateY(0);
     }
 }
 
@@ -195,38 +168,51 @@ a:hover {
 
     0% {
         opacity: 0;
-
-        transform:
-            translateY(15px);
+        transform: translateY(15px);
     }
 
     100% {
         opacity: 1;
-
-        transform:
-            translateY(0);
+        transform: translateY(0);
     }
 }
 
 
-/* Very slow cinematic movement */
+/* -------------------------------------------------
+   SLOW CINEMATIC BACKGROUND MOVEMENT
+------------------------------------------------- */
 
 @keyframes spaceDrift {
 
     0% {
-        background-position:
-            center center;
-
-        background-size:
-            100% auto;
+        background-position: center center;
+        background-size: 100% auto;
     }
 
     100% {
-        background-position:
-            52% 48%;
+        background-position: 52% 48%;
+        background-size: 106% auto;
+    }
+}
 
-        background-size:
-            106% auto;
+
+/* -------------------------------------------------
+   EXIT TRANSITION
+------------------------------------------------- */
+
+body.leaving {
+    animation: leavePage 0.7s ease forwards;
+}
+
+
+@keyframes leavePage {
+
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
@@ -245,26 +231,6 @@ a:hover {
     #Elements {
         right: 8vw;
         bottom: 160px;
-    }
-
-}
-
-/* -------------------------------------------------
-   EXIT TRANSITION
-------------------------------------------------- */
-
-body.leaving {
-    animation: leavePage 0.7s ease forwards;
-}
-
-@keyframes leavePage {
-
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
     }
 
 }

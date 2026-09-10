@@ -5,42 +5,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /*
      * ------------------------------------------------
-     * AUDIO
+     * ENTER BUTTON
      * ------------------------------------------------
      *
-     * Browsers generally block automatic audio playback.
-     * We therefore start PER.mp3 after the user's first
-     * interaction with the page.
-     */
-
-    function startAudio() {
-
-        if (!audio) return;
-
-        audio.volume = 0.8;
-
-        audio.play().catch(() => {
-            console.log("Audio playback requires user interaction.");
-        });
-
-        document.removeEventListener("click", startAudio);
-        document.removeEventListener("keydown", startAudio);
-    }
-
-    document.addEventListener("click", startAudio);
-    document.addEventListener("keydown", startAudio);
-
-
-    /*
-     * ------------------------------------------------
-     * ENTER TRANSITION
-     * ------------------------------------------------
+     * Audio ONLY begins when ENTER is clicked.
      *
-     * When ENTER is clicked, fade the entire landing
-     * page to black before navigating.
+     * The current playback position is saved so that
+     * about.html can continue the same track.
      */
 
-    if (enterButton) {
+    if (enterButton && audio) {
 
         enterButton.addEventListener("click", (event) => {
 
@@ -48,13 +22,83 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const destination = enterButton.href;
 
-            document.body.classList.add("leaving");
+            audio.volume = 0.8;
 
-            setTimeout(() => {
+            /*
+             * Start the music immediately from the user's
+             * click. This satisfies browser autoplay rules
+             * because the play() call is inside the click.
+             */
 
-                window.location.href = destination;
+            audio.play()
+                .then(() => {
 
-            }, 700);
+                    /*
+                     * Store that music has been started.
+                     */
+
+                    sessionStorage.setItem(
+                        "musicPlaying",
+                        "true"
+                    );
+
+                    /*
+                     * Save the current playback position.
+                     */
+
+                    sessionStorage.setItem(
+                        "musicTime",
+                        audio.currentTime.toString()
+                    );
+
+                    /*
+                     * Begin visual transition.
+                     */
+
+                    document.body.classList.add("leaving");
+
+                    /*
+                     * Navigate after the fade begins.
+                     */
+
+                    setTimeout(() => {
+
+                        /*
+                         * Save the position one final time
+                         * immediately before navigation.
+                         */
+
+                        sessionStorage.setItem(
+                            "musicTime",
+                            audio.currentTime.toString()
+                        );
+
+                        window.location.href = destination;
+
+                    }, 700);
+
+                })
+                .catch((error) => {
+
+                    console.log(
+                        "Audio playback failed:",
+                        error
+                    );
+
+                    /*
+                     * Still allow navigation if audio
+                     * cannot be played.
+                     */
+
+                    document.body.classList.add("leaving");
+
+                    setTimeout(() => {
+
+                        window.location.href = destination;
+
+                    }, 700);
+
+                });
 
         });
 

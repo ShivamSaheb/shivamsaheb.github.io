@@ -248,3 +248,23 @@ a:hover {
     }
 
 }
+
+/* -------------------------------------------------
+   EXIT TRANSITION
+------------------------------------------------- */
+
+body.leaving {
+    animation: leavePage 0.7s ease forwards;
+}
+
+@keyframes leavePage {
+
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}

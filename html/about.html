@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <title> Shivam </title>
     <meta name="viewport" content="width=device-width">
@@ -8,73 +9,159 @@
 
 <section id="Site">
     <h3>
-        <a href="../html/">SHIVAM SAHEB </a>
+        <a href="../html/">SHIVAM SAHEB</a>
     </h3>
 </section>
 
 <body>
+
     <header>
         <section id="Elements">
             <h3>
                 <a href="../html/about">About</a> |
-                <a href="../html/about"> Portfolio</a> |
-                <a href="https://www.linkedin.com/in/shivamsaheb/" target="_blank"> linkedin</a> |
-                <a href="https://soundcloud.com/therealshivam" target="_blank"> Music</a> |
+                <a href="../html/about">Portfolio</a> |
+                <a href="https://www.linkedin.com/in/shivamsaheb/" target="_blank">linkedin</a> |
+                <a href="https://soundcloud.com/therealshivam" target="_blank">Music</a> |
                 <a href="../html/contactform">Contact</a>
             </h3>
         </section>
     </header>
 
+
     <div class="row">
+
         <div class="column">
-            <p id="aboutheadings" style="font-size:20px"> About </p>
+
+            <p id="aboutheadings" style="font-size:20px">
+                About
+            </p>
+
             <p id="aboutparas" style="font-size:15px">
-                
             </p>
+
             <p id="aboutparas" style="font-size:15px">
-               
             </p>
+
             <p id="aboutparas" style="font-size:15px">
-                
             </p>
-        </div>
-        <div class="column">
-            <p id="aboutheadings" style="font-size:20px"> Present </p>
-            <p id="aboutparas">
-                
-            </p>
-            <p id="aboutparas">
-                
-            </p>
-        </div>
-        <div class="column">
-            <p id="aboutheadings" style="font-size:20px"> Future </p>
-            <p id="aboutparas">
-               
-            </p>
-            <p id="aboutparas">
-              
-            </p>
-            <p id="aboutparas">
-           
-            </p>
-            <p id="aboutparas">
-                
-            </p>
+
         </div>
 
+
+        <div class="column">
+
+            <p id="aboutheadings" style="font-size:20px">
+                Present
+            </p>
+
+            <p id="aboutparas">
+            </p>
+
+            <p id="aboutparas">
+            </p>
+
+        </div>
+
+
+        <div class="column">
+
+            <p id="aboutheadings" style="font-size:20px">
+                Future
+            </p>
+
+            <p id="aboutparas">
+            </p>
+
+            <p id="aboutparas">
+            </p>
+
+            <p id="aboutparas">
+            </p>
+
+            <p id="aboutparas">
+            </p>
+
+        </div>
 
     </div>
 
 
+    <!--
+        Music transition.
+
+        This is intentionally on the About page rather than
+        relying on the audio element from index.html to survive
+        navigation.
+    -->
+
+    <audio id="bgMusic" src="../Extras/PER.mp3" preload="auto"></audio>
 
 
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const audio = document.getElementById("bgMusic");
+
+            const musicPlaying =
+                sessionStorage.getItem("musicPlaying");
+
+            const savedTime =
+                parseFloat(
+                    sessionStorage.getItem("musicTime")
+                );
 
 
+            /*
+             * Only continue the music if the user arrived
+             * here through ENTER.
+             */
 
+            if (
+                musicPlaying === "true" &&
+                audio
+            ) {
 
+                /*
+                 * Wait until the browser has loaded enough
+                 * metadata to seek to the correct position.
+                 */
 
+                audio.addEventListener(
+                    "loadedmetadata",
+                    () => {
 
+                        if (!isNaN(savedTime)) {
+
+                            /*
+                             * Continue from the exact point
+                             * at which the landing page left off.
+                             */
+
+                            audio.currentTime = savedTime;
+
+                        }
+
+                        audio.volume = 0.8;
+
+                        audio.play().catch(error => {
+
+                            console.log(
+                                "Audio continuation blocked:",
+                                error
+                            );
+
+                        });
+
+                    },
+                    { once: true }
+                );
+
+            }
+
+        });
+
+    </script>
 
 
 </body>

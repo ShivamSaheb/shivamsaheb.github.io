@@ -1,15 +1,38 @@
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
 html {
-    background-color: black;
-    font: 15px Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
-    overflow: hidden;
+    background: black;
+    font: 15px Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
-.bg {
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+
+/* =========================================================
+   LANDING SECTION
+   ========================================================= */
+
+#landing {
+
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
     background:
         url('../images/spacestation.jpg')
         no-repeat
-        center center fixed;
+        center center;
 
     background-size: cover;
 
@@ -21,41 +44,49 @@ html {
 }
 
 
-/* -------------------------------------------------
+/* =========================================================
    INITIAL BLACK SCREEN
-------------------------------------------------- */
+   ========================================================= */
 
 #intro {
-    position: fixed;
+
+    position: absolute;
+
     top: 0;
     left: 0;
 
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 
     background: black;
 
     z-index: 100;
+
     pointer-events: none;
 
-    animation: introFade 3.2s ease forwards;
+    animation:
+        introFade 3.2s ease forwards;
 }
 
 
-/* -------------------------------------------------
-   NAME
-------------------------------------------------- */
+/* =========================================================
+   LANDING - SHIVAM SAHEB
+   ========================================================= */
 
 #Site {
-    position: fixed;
 
-    bottom: 80px;
+    position: absolute;
+
     right: 125px;
+    bottom: 80px;
 
     letter-spacing: 1vw;
-    font-size: clamp(16px, 2.5vw, 25px);
+
+    font-size:
+        clamp(16px, 2.5vw, 25px);
 
     opacity: 0;
+
     transform: translateY(15px);
 
     animation:
@@ -64,6 +95,7 @@ html {
 
 
 #Site a {
+
     display: inline-block;
 
     width: 100%;
@@ -71,35 +103,41 @@ html {
 }
 
 
-/* -------------------------------------------------
-   ENTER
-------------------------------------------------- */
+/* =========================================================
+   LANDING - ENTER
+   ========================================================= */
 
 #Elements {
-    position: fixed;
 
-    bottom: 200px;
+    position: absolute;
+
     right: 125px;
+    bottom: 200px;
 
     letter-spacing: 0.5vw;
-    font-size: clamp(20px, 4vw, 40px);
+
+    font-size:
+        clamp(20px, 4vw, 40px);
 
     opacity: 0;
+
     transform: translateY(15px);
 
     animation:
-        enterReveal 1.2s ease 3.0s forwards;
+        enterReveal 1.2s ease 3s forwards;
 }
 
 
-/* -------------------------------------------------
+/* =========================================================
    LINKS
-------------------------------------------------- */
+   ========================================================= */
 
 a {
+
     color: gold;
 
     text-decoration: none;
+
     text-transform: uppercase;
 
     transition:
@@ -109,18 +147,160 @@ a {
 
 
 a:hover {
+
     color: white;
 }
 
 
 #enterButton:hover {
+
     letter-spacing: 0.8vw;
 }
 
 
-/* -------------------------------------------------
-   ANIMATIONS
-------------------------------------------------- */
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
+
+#about {
+
+    position: relative;
+
+    width: 100vw;
+
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    background:
+        url('../images/websitebackground.png')
+        no-repeat
+        center center;
+
+    background-size: cover;
+
+    background-attachment: fixed;
+
+    color: #061b2b;
+
+    padding-top: 1px;
+}
+
+
+/* =========================================================
+   ABOUT - TOP LEFT NAME
+   ========================================================= */
+
+#AboutSite {
+
+    position: absolute;
+
+    top: 30px;
+    left: 40px;
+
+    letter-spacing: 0.7vw;
+
+    font-size:
+        clamp(14px, 2vw, 20px);
+
+    z-index: 10;
+}
+
+
+#AboutSite h3 {
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   ABOUT - NAVIGATION
+   ========================================================= */
+
+#AboutElements {
+
+    position: absolute;
+
+    top: 30px;
+    right: 40px;
+
+    font-size:
+        clamp(11px, 1.2vw, 15px);
+
+    letter-spacing: 0.15vw;
+
+    z-index: 10;
+}
+
+
+#AboutElements h3 {
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   ABOUT - CONTENT
+   ========================================================= */
+
+.row {
+
+    display: flex;
+
+    width: 90%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding-top: 180px;
+}
+
+
+.column {
+
+    flex: 1;
+
+    padding:
+        0 40px;
+
+    box-sizing: border-box;
+}
+
+
+.aboutheadings {
+
+    margin-top: 0;
+
+    margin-bottom: 30px;
+
+    letter-spacing: 0.2vw;
+
+    text-transform: uppercase;
+}
+
+
+.aboutparas {
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   AUDIO
+   ========================================================= */
+
+#bgMusic {
+
+    display: none;
+}
+
+
+/* =========================================================
+   LANDING ANIMATIONS
+   ========================================================= */
 
 @keyframes introFade {
 
@@ -153,13 +333,19 @@ a:hover {
 @keyframes nameReveal {
 
     0% {
+
         opacity: 0;
-        transform: translateY(15px);
+
+        transform:
+            translateY(15px);
     }
 
     100% {
+
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+            translateY(0);
     }
 }
 
@@ -167,70 +353,120 @@ a:hover {
 @keyframes enterReveal {
 
     0% {
+
         opacity: 0;
-        transform: translateY(15px);
+
+        transform:
+            translateY(15px);
     }
 
     100% {
+
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+            translateY(0);
     }
 }
 
-
-/* -------------------------------------------------
-   SLOW CINEMATIC BACKGROUND MOVEMENT
-------------------------------------------------- */
 
 @keyframes spaceDrift {
 
     0% {
-        background-position: center center;
-        background-size: 100% auto;
+
+        background-position:
+            center center;
+
+        background-size:
+            100% auto;
     }
 
     100% {
-        background-position: 52% 48%;
-        background-size: 106% auto;
+
+        background-position:
+            52% 48%;
+
+        background-size:
+            106% auto;
     }
 }
 
 
-/* -------------------------------------------------
-   EXIT TRANSITION
-------------------------------------------------- */
+/* =========================================================
+   ABOUT TRANSITION
+   ========================================================= */
 
-body.leaving {
-    animation: leavePage 0.7s ease forwards;
+#about {
+
+    opacity: 0;
+
+    transition:
+        opacity 1.2s ease;
 }
 
 
-@keyframes leavePage {
+body.about-visible #about {
 
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
+    opacity: 1;
 }
 
 
-/* -------------------------------------------------
+/* =========================================================
    MOBILE
-------------------------------------------------- */
+   ========================================================= */
 
 @media (max-width: 700px) {
 
     #Site {
+
         right: 8vw;
+
         bottom: 70px;
     }
 
+
     #Elements {
+
         right: 8vw;
+
         bottom: 160px;
+    }
+
+
+    #AboutSite {
+
+        left: 8vw;
+
+        top: 25px;
+    }
+
+
+    #AboutElements {
+
+        right: 8vw;
+
+        top: 75px;
+
+        max-width: 80vw;
+
+        line-height: 2;
+    }
+
+
+    .row {
+
+        display: block;
+
+        width: 85%;
+
+        padding-top: 180px;
+    }
+
+
+    .column {
+
+        padding:
+            0 0 50px 0;
     }
 
 }

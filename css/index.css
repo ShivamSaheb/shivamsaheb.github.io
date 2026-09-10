@@ -1,87 +1,250 @@
-html { 
-    background-color: coral;
+html {
+    background-color: black;
     font: 15px Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
-    overflow-y: hidden;
-    transition: background-color 3s ease;
+    overflow: hidden;
 }
+
+/* -------------------------------------------------
+   BACKGROUND
+------------------------------------------------- */
 
 .bg {
-    background: url('../images/spacestation.jpg') no-repeat center center fixed; 
+    background:
+        url('../images/spacestation.jpg')
+        no-repeat
+        center center fixed;
+
     background-size: cover;
+
+    opacity: 0;
+
+    animation:
+        pageReveal 3.5s ease forwards,
+        spaceDrift 25s ease-in-out 3.5s infinite alternate;
 }
 
-/* Elements section (buttons) - bottom left */
-#Elements {
+
+/* -------------------------------------------------
+   INITIAL BLACK SCREEN
+------------------------------------------------- */
+
+#intro {
     position: fixed;
-    bottom: 200px;
-    right: 125px;
-    letter-spacing: 0.5vw;
-    font-size: clamp(20px, 4vw, 40px);
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: black;
+
+    z-index: 100;
+
+    pointer-events: none;
+
+    animation: introFade 3.2s ease forwards;
 }
 
-/* Name section - slightly above Elements */
+
+/* -------------------------------------------------
+   NAME
+------------------------------------------------- */
+
 #Site {
     position: fixed;
-    bottom: 80px; /* Sits above the buttons */
+
+    bottom: 80px;
     right: 125px;
+
     letter-spacing: 1vw;
+
     font-size: clamp(16px, 2.5vw, 25px);
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    animation:
+        nameReveal 1.5s cubic-bezier(.22, .61, .36, 1)
+        2.0s forwards;
 }
+
 
 #Site a {
     display: inline-block;
+
     width: 100%;
     height: auto;
 }
 
-/* Links */
-a {
-    color: gold; 
-    text-decoration: none; 
-    text-transform: uppercase; 
-    transition: 0.5s ease;
+
+/* -------------------------------------------------
+   ENTER
+------------------------------------------------- */
+
+#Elements {
+    position: fixed;
+
+    bottom: 200px;
+    right: 125px;
+
+    letter-spacing: 0.5vw;
+
+    font-size: clamp(20px, 4vw, 40px);
+
+    opacity: 0;
+
+    transform: translateY(15px);
+
+    animation:
+        enterReveal 1.2s ease
+        3.0s forwards;
 }
+
+
+/* -------------------------------------------------
+   LINKS
+------------------------------------------------- */
+
+a {
+    color: gold;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    transition:
+        color 0.5s ease,
+        letter-spacing 0.5s ease;
+}
+
 
 a:hover {
     color: white;
 }
 
-/* Main contact container */
-.ContactContainer {
-    padding-left: 5vw;
-    margin-top: 5vh;
+
+/* Subtle movement when hovering ENTER */
+
+#enterButton:hover {
+    letter-spacing: 0.8vw;
 }
 
-.forminputs {
-    margin: 2vh 0;
+
+/* -------------------------------------------------
+   ANIMATIONS
+------------------------------------------------- */
+
+@keyframes introFade {
+
+    0% {
+        opacity: 1;
+    }
+
+    55% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
-#name, #email, #subject, #message {
-    border: none;
-    border-bottom: 1px solid #0b212e;
-    outline: 0;
-    background: transparent;
+
+@keyframes pageReveal {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
-::placeholder {
-    color: rgb(14, 52, 66);
-    opacity: 1;
+
+@keyframes nameReveal {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+        letter-spacing: 1.8vw;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+        letter-spacing: 1vw;
+    }
 }
 
-/* Buttons */
-.btn-start-order {
-    background: transparent;
-    border: 1px solid #0b212e;
-    margin: 1vh 5vw;
-    padding: 1vh 3vw;
-    text-transform: uppercase;
-    transition: all 0.25s ease;
+
+@keyframes enterReveal {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
 }
 
-.btn-start-order:hover,
-.btn-start-order:active,
-.btn-start-order:focus {
-    color: #0b212e;
-    background: white;
+
+/* Very slow cinematic movement */
+
+@keyframes spaceDrift {
+
+    0% {
+        background-position:
+            center center;
+
+        background-size:
+            100% auto;
+    }
+
+    100% {
+        background-position:
+            52% 48%;
+
+        background-size:
+            106% auto;
+    }
+}
+
+
+/* -------------------------------------------------
+   MOBILE
+------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    #Site {
+        right: 8vw;
+        bottom: 70px;
+    }
+
+    #Elements {
+        right: 8vw;
+        bottom: 160px;
+    }
+
 }

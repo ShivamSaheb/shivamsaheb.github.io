@@ -1,3 +1,4 @@
+```css
 /* =========================================================
    GLOBAL
    ========================================================= */
@@ -21,12 +22,9 @@ body {
    ========================================================= */
 
 #landing {
-
     position: relative;
-
     width: 100vw;
     height: 100vh;
-
     overflow: hidden;
 
     background:
@@ -49,9 +47,7 @@ body {
    ========================================================= */
 
 #intro {
-
     position: absolute;
-
     top: 0;
     left: 0;
 
@@ -61,20 +57,17 @@ body {
     background: black;
 
     z-index: 100;
-
     pointer-events: none;
 
-    animation:
-        introFade 3.2s ease forwards;
+    animation: introFade 3.2s ease forwards;
 }
 
 
 /* =========================================================
-   LANDING - SHIVAM SAHEB
+   LANDING - NAME
    ========================================================= */
 
-#Site {
-
+#landing #Site {
     position: absolute;
 
     right: 125px;
@@ -82,22 +75,17 @@ body {
 
     letter-spacing: 1vw;
 
-    font-size:
-        clamp(16px, 2.5vw, 25px);
+    font-size: clamp(16px, 2.5vw, 25px);
 
     opacity: 0;
 
     transform: translateY(15px);
 
-    animation:
-        nameReveal 1.4s ease-out 1.8s forwards;
+    animation: nameReveal 1.4s ease-out 1.8s forwards;
 }
 
-
-#Site a {
-
+#landing #Site a {
     display: inline-block;
-
     width: 100%;
     height: auto;
 }
@@ -107,8 +95,7 @@ body {
    LANDING - ENTER
    ========================================================= */
 
-#Elements {
-
+#landing #Elements {
     position: absolute;
 
     right: 125px;
@@ -116,28 +103,24 @@ body {
 
     letter-spacing: 0.5vw;
 
-    font-size:
-        clamp(20px, 4vw, 40px);
+    font-size: clamp(20px, 4vw, 40px);
 
     opacity: 0;
 
     transform: translateY(15px);
 
-    animation:
-        enterReveal 1.2s ease 3s forwards;
+    animation: enterReveal 1.2s ease 3s forwards;
 }
 
 
 /* =========================================================
-   LINKS
+   LANDING LINKS
    ========================================================= */
 
-a {
-
+#landing a {
     color: gold;
 
     text-decoration: none;
-
     text-transform: uppercase;
 
     transition:
@@ -145,15 +128,11 @@ a {
         letter-spacing 0.5s ease;
 }
 
-
-a:hover {
-
+#landing a:hover {
     color: white;
 }
 
-
 #enterButton:hover {
-
     letter-spacing: 0.8vw;
 }
 
@@ -163,11 +142,9 @@ a:hover {
    ========================================================= */
 
 #about {
-
     position: relative;
 
     width: 100vw;
-
     min-height: 100vh;
 
     box-sizing: border-box;
@@ -175,41 +152,43 @@ a:hover {
     background:
         url('../images/websitebackground.png')
         no-repeat
-        center center;
+        center center fixed;
 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 
-    background-attachment: fixed;
+    font: 15px Arial, Helvetica, sans-serif;
 
-    color: #061b2b;
-
-    padding-top: 1px;
+    color: #0b212e;
 }
 
 
 /* =========================================================
-   ABOUT - TOP LEFT NAME
+   ABOUT - SITE NAME
    ========================================================= */
 
 #AboutSite {
+    float: left;
+
+    letter-spacing: 7px;
+    word-spacing: 10px;
+
+    padding-left: 40px;
+
+    min-height: 400px;
+
+    text-align: center;
 
     position: absolute;
 
-    top: 30px;
-    left: 40px;
-
-    letter-spacing: 0.7vw;
-
-    font-size:
-        clamp(14px, 2vw, 20px);
-
-    z-index: 10;
+    left: 0;
+    top: 1px;
 }
 
-
 #AboutSite h3 {
-
-    margin: 0;
+    margin: 1em 0;
 }
 
 
@@ -218,73 +197,98 @@ a:hover {
    ========================================================= */
 
 #AboutElements {
+    letter-spacing: 3px;
+    word-spacing: 5px;
+
+    margin-right: 10px;
+
+    min-height: 400px;
+
+    text-align: center;
 
     position: absolute;
 
-    top: 30px;
-    right: 40px;
-
-    font-size:
-        clamp(11px, 1.2vw, 15px);
-
-    letter-spacing: 0.15vw;
-
-    z-index: 10;
+    right: 20px;
+    top: 1px;
 }
 
-
 #AboutElements h3 {
-
-    margin: 0;
+    margin: 1em 0;
 }
 
 
 /* =========================================================
-   ABOUT - CONTENT
+   ABOUT LINKS
    ========================================================= */
 
-.row {
+#about a {
+    color: #0b212e;
 
-    display: flex;
+    text-decoration: none;
+    text-transform: uppercase;
 
-    width: 90%;
+    font-size: 16px;
+}
 
-    max-width: 1400px;
+#about a:hover {
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
 
-    margin: 0 auto;
-
-    padding-top: 180px;
+    color: white;
 }
 
 
-.column {
+/* =========================================================
+   ABOUT COLUMNS
+   ========================================================= */
 
-    flex: 1;
+#about .column {
+    float: left;
 
-    padding:
-        0 40px;
+    width: 25%;
+
+    padding-top: 50px;
+    padding-left: 100px;
 
     box-sizing: border-box;
 }
 
 
-.aboutheadings {
+/* =========================================================
+   CLEAR FLOATS
+   ========================================================= */
 
-    margin-top: 0;
+#about .row:after {
+    content: "";
 
-    margin-bottom: 30px;
+    display: table;
 
-    letter-spacing: 0.2vw;
+    clear: both;
+}
+
+
+/* =========================================================
+   ABOUT HEADINGS
+   ========================================================= */
+
+#about .aboutheadings {
+    text-align: center;
+
+    letter-spacing: 5px;
+    word-spacing: 10px;
 
     text-transform: uppercase;
 }
 
 
-.aboutparas {
+/* =========================================================
+   ABOUT PARAGRAPHS
+   ========================================================= */
 
-    line-height: 1.7;
+#about .aboutparas {
+    text-align: justify;
 
-    margin-bottom: 25px;
+    line-height: 2;
 }
 
 
@@ -293,7 +297,6 @@ a:hover {
    ========================================================= */
 
 #bgMusic {
-
     display: none;
 }
 
@@ -303,7 +306,6 @@ a:hover {
    ========================================================= */
 
 @keyframes introFade {
-
     0% {
         opacity: 1;
     }
@@ -319,7 +321,6 @@ a:hover {
 
 
 @keyframes pageReveal {
-
     0% {
         opacity: 0;
     }
@@ -331,83 +332,41 @@ a:hover {
 
 
 @keyframes nameReveal {
-
     0% {
-
         opacity: 0;
-
-        transform:
-            translateY(15px);
+        transform: translateY(15px);
     }
 
     100% {
-
         opacity: 1;
-
-        transform:
-            translateY(0);
+        transform: translateY(0);
     }
 }
 
 
 @keyframes enterReveal {
-
     0% {
-
         opacity: 0;
-
-        transform:
-            translateY(15px);
+        transform: translateY(15px);
     }
 
     100% {
-
         opacity: 1;
-
-        transform:
-            translateY(0);
+        transform: translateY(0);
     }
 }
 
 
 @keyframes spaceDrift {
-
     0% {
-
-        background-position:
-            center center;
-
-        background-size:
-            100% auto;
+        background-position: center center;
+        background-size: 100% auto;
     }
 
     100% {
-
-        background-position:
-            52% 48%;
-
-        background-size:
-            106% auto;
+        background-position: 52% 48%;
+        background-size: 106% auto;
     }
-}
-
-
-/* =========================================================
-   ABOUT TRANSITION
-   ========================================================= */
-
-#about {
-
-    opacity: 0;
-
-    transition:
-        opacity 1.2s ease;
-}
-
-
-body.about-visible #about {
-
-    opacity: 1;
 }
 
 
@@ -417,56 +376,42 @@ body.about-visible #about {
 
 @media (max-width: 700px) {
 
-    #Site {
-
+    #landing #Site {
         right: 8vw;
-
         bottom: 70px;
     }
 
-
-    #Elements {
-
+    #landing #Elements {
         right: 8vw;
-
         bottom: 160px;
     }
 
-
     #AboutSite {
-
-        left: 8vw;
-
-        top: 25px;
+        padding-left: 8vw;
     }
 
-
     #AboutElements {
-
         right: 8vw;
-
-        top: 75px;
+        top: 60px;
 
         max-width: 80vw;
 
         line-height: 2;
     }
 
-
-    .row {
-
-        display: block;
-
-        width: 85%;
-
-        padding-top: 180px;
+    #about .row {
+        width: 100%;
     }
 
+    #about .column {
+        float: none;
 
-    .column {
+        width: 80%;
 
-        padding:
-            0 0 50px 0;
+        padding-top: 50px;
+        padding-left: 10%;
+
+        margin: 0 auto;
     }
-
 }
+```

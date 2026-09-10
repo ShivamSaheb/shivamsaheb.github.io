@@ -1,107 +1,126 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const audio = document.getElementById("bgMusic");
-    const enterButton = document.getElementById("enterButton");
 
-    /*
-     * ------------------------------------------------
-     * ENTER BUTTON
-     * ------------------------------------------------
-     *
-     * Audio ONLY begins when ENTER is clicked.
-     *
-     * The current playback position is saved so that
-     * about.html can continue the same track.
-     */
+    const audio =
+        document.getElementById("bgMusic");
 
-    if (enterButton && audio) {
 
-        enterButton.addEventListener("click", (event) => {
+    const enterButton =
+        document.getElementById("enterButton");
 
-            event.preventDefault();
 
-            const destination = enterButton.href;
+    const landing =
+        document.getElementById("landing");
+
+
+    const about =
+        document.getElementById("about");
+
+
+    const homeLink =
+        document.querySelector("#Site a");
+
+
+    const aboutHomeLink =
+        document.querySelector("#AboutSite a");
+
+
+
+    /* =====================================================
+       ENTER → START MUSIC + MOVE TO ABOUT
+       ===================================================== */
+
+    enterButton.addEventListener("click", (event) => {
+
+        event.preventDefault();
+
+
+        /*
+         * Start the music directly from the user's click.
+         *
+         * Because the audio element belongs to this page,
+         * it will continue playing while the page scrolls.
+         */
+
+        if (audio) {
 
             audio.volume = 0.8;
 
-            /*
-             * Start the music immediately from the user's
-             * click. This satisfies browser autoplay rules
-             * because the play() call is inside the click.
-             */
+            audio.play().catch((error) => {
 
-            audio.play()
-                .then(() => {
+                console.log(
+                    "Audio playback blocked:",
+                    error
+                );
 
-                    /*
-                     * Store that music has been started.
-                     */
+            });
 
-                    sessionStorage.setItem(
-                        "musicPlaying",
-                        "true"
-                    );
+        }
 
-                    /*
-                     * Save the current playback position.
-                     */
 
-                    sessionStorage.setItem(
-                        "musicTime",
-                        audio.currentTime.toString()
-                    );
+        /*
+         * Mark the About section as active.
+         */
 
-                    /*
-                     * Begin visual transition.
-                     */
+        document.body.classList.add("about-visible");
 
-                    document.body.classList.add("leaving");
 
-                    /*
-                     * Navigate after the fade begins.
-                     */
+        /*
+         * Smoothly scroll to About.
+         */
 
-                    setTimeout(() => {
-
-                        /*
-                         * Save the position one final time
-                         * immediately before navigation.
-                         */
-
-                        sessionStorage.setItem(
-                            "musicTime",
-                            audio.currentTime.toString()
-                        );
-
-                        window.location.href = destination;
-
-                    }, 700);
-
-                })
-                .catch((error) => {
-
-                    console.log(
-                        "Audio playback failed:",
-                        error
-                    );
-
-                    /*
-                     * Still allow navigation if audio
-                     * cannot be played.
-                     */
-
-                    document.body.classList.add("leaving");
-
-                    setTimeout(() => {
-
-                        window.location.href = destination;
-
-                    }, 700);
-
-                });
-
+        about.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
         });
 
-    }
+    });
+
+
+
+    /* =====================================================
+       SHIVAM SAHEB → RETURN TO LANDING
+       ===================================================== */
+
+    homeLink.addEventListener("click", (event) => {
+
+        event.preventDefault();
+
+
+        document.body.classList.remove(
+            "about-visible"
+        );
+
+
+        landing.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    });
+
+
+
+    /* =====================================================
+       ABOUT SHIVAM SAHEB → RETURN TO LANDING
+       ===================================================== */
+
+    aboutHomeLink.addEventListener("click", (event) => {
+
+        event.preventDefault();
+
+
+        document.body.classList.remove(
+            "about-visible"
+        );
+
+
+        landing.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    });
+
 
 });

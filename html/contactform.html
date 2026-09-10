@@ -1,63 +1,154 @@
+<!DOCTYPE html>
+
 <html>
 
 <head>
-    <title> Shivam </title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" type="image/ico" href="../Extras/favicon.ico">
-    <link rel="stylesheet" href="../css/contactform.css">
+    <title>Shivam</title>
+
+```
+<meta name="viewport" content="width=device-width">
+
+<link
+    rel="shortcut icon"
+    type="image/ico"
+    href="../Extras/favicon.ico"
+>
+
+<link
+    rel="stylesheet"
+    href="../css/contactform.css"
+>
+```
+
 </head>
 
+<body>
+
+```
 <section id="Site">
     <h3>
-        <a href="../html/">SHIVAM SAHEB </a>
+        <a href="../html/index">SHIVAM SAHEB</a>
     </h3>
 </section>
 
-<body>
-    <header>
-        <section id="Elements">
-            <h3>
-                <a href="../html/about">About</a> |
-                <a href="../html/about"> Portfolio</a> |
-                <a href="https://www.linkedin.com/in/shivamsaheb/" target="_blank"> linkedin</a> |
-                <a href="https://soundcloud.com/therealshivam" target="_blank"> Music</a> |
-                <a href="../html/contactform">Contact</a>
-            </h3>
-        </section>
-    </header>
+<header>
+    <section id="Elements">
+        <h3>
+            <a href="../html/index#about">About</a> |
+            <a href="../html/index#about">Portfolio</a> |
+            <a
+                href="https://www.linkedin.com/in/shivamsaheb/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn
+            </a> |
+            <a
+                href="https://soundcloud.com/therealshivam"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Music
+            </a> |
+            <a href="../html/contactform">Contact</a>
+        </h3>
+    </section>
+</header>
 
-    <div class="ContactContainer">
-        <div>
-            <h2>From the Jump...</h2>
-        </div>
-        <div>
-            <div>
-                <form id="contact-form" class="form" action="https://formspree.io/damagecontrol@gmail.com" method="POST">
-                    <div class="forminputs">
-                        <input type="text" class="form-control" size="19" id="name" name="First Name" pattern="[A-Za-z]+"
-                            placeholder="First Name*" tabindex="1" required>
-                        <input type="text" class="form-control" size="24" id="name" name="Last Name" pattern="[A-Za-z]+"
-                            placeholder="Last Name*" tabindex="2" required>
-                    </div>
-                    <div class="forminputs">
-                        <input type="email" class="form-control" size="48" id="email" name="Email" placeholder="Email*"
-                            tabindex="3">
-                    </div>
-                    <div class="forminputs">
-                        <input type="text" class="form-control" size="48" id="subject" name="Subject" placeholder="Subject"
-                            tabindex="4" required>
-                    </div>
-                    <div class="forminputs">
-                        <textarea rows="5" cols="50" name="Message" class="form-control" id="message" placeholder="What would you like to say?...*"
-                            tabindex="5"></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" value="Send" class="btn-start-order">Send Message</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+<div class="ContactContainer">
+
+    <div>
+        <h2>From the Jump...</h2>
     </div>
+
+    <div>
+        <form
+            id="contact-form"
+            class="form"
+            action="https://formspree.io/damagecontrol@gmail.com"
+            method="POST"
+        >
+
+            <div class="forminputs">
+                <input
+                    type="text"
+                    class="form-control"
+                    size="19"
+                    id="first-name"
+                    name="First Name"
+                    pattern="[A-Za-z]+"
+                    placeholder="First Name*"
+                    tabindex="1"
+                    required
+                >
+
+                <input
+                    type="text"
+                    class="form-control"
+                    size="24"
+                    id="last-name"
+                    name="Last Name"
+                    pattern="[A-Za-z]+"
+                    placeholder="Last Name*"
+                    tabindex="2"
+                    required
+                >
+            </div>
+
+            <div class="forminputs">
+                <input
+                    type="email"
+                    class="form-control"
+                    size="48"
+                    id="email"
+                    name="Email"
+                    placeholder="Email*"
+                    tabindex="3"
+                    required
+                >
+            </div>
+
+            <div class="forminputs">
+                <input
+                    type="text"
+                    class="form-control"
+                    size="48"
+                    id="subject"
+                    name="Subject"
+                    placeholder="Subject"
+                    tabindex="4"
+                    required
+                >
+            </div>
+
+            <div class="forminputs">
+                <textarea
+                    rows="5"
+                    cols="50"
+                    name="Message"
+                    class="form-control"
+                    id="message"
+                    placeholder="What would you like to say?...*"
+                    tabindex="5"
+                    required
+                ></textarea>
+            </div>
+
+            <div>
+                <button
+                    type="submit"
+                    value="Send"
+                    class="btn-start-order"
+                >
+                    Send Message
+                </button>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+```
 
 </body>
 

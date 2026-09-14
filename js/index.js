@@ -61,7 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         event.preventDefault();
 
-        window.location.reload();
+        window.location.href =
+            window.location.pathname + window.location.search;
 
     };
 

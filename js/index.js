@@ -1,105 +1,79 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-```
-const audio = document.getElementById("bgMusic");
-const enterButton = document.getElementById("enterButton");
-const landing = document.getElementById("landing");
-const about = document.getElementById("about");
-const landingName = document.querySelector("#Site a");
-const aboutName = document.querySelector("#AboutSite a");
+    const audio = document.getElementById("bgMusic");
+    const enterButton = document.getElementById("enterButton");
+    const about = document.getElementById("about");
+    const landingName = document.querySelector("#Site a");
+    const aboutName = document.querySelector("#AboutSite a");
 
 
-/* =====================================================
-   ENTER → START MUSIC + SCROLL TO ABOUT
-   ===================================================== */
+    /* =====================================================
+       ENTER → START MUSIC + SCROLL TO ABOUT
+       ===================================================== */
 
-if (enterButton) {
+    if (enterButton) {
 
-    enterButton.addEventListener("click", (event) => {
+        enterButton.addEventListener("click", (event) => {
 
-        event.preventDefault();
+            event.preventDefault();
 
-        if (audio) {
+            if (audio) {
 
-            audio.volume = 0.8;
+                audio.volume = 0.8;
 
-            const playPromise = audio.play();
+                const playPromise = audio.play();
 
-            if (playPromise !== undefined) {
+                if (playPromise !== undefined) {
 
-                playPromise.catch((error) => {
+                    playPromise.catch((error) => {
 
-                    console.log(
-                        "Audio playback blocked:",
-                        error
-                    );
+                        console.log(
+                            "Audio playback blocked:",
+                            error
+                        );
 
+                    });
+
+                }
+
+            }
+
+            if (about) {
+
+                about.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
                 });
 
             }
 
-        }
+        });
 
-        if (about) {
-
-            about.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        }
-
-    });
-
-}
+    }
 
 
-/* =====================================================
-   LANDING NAME → RETURN TO TOP
-   ===================================================== */
+    /* =====================================================
+       NAME → RELOAD THE SITE
+       ===================================================== */
 
-if (landingName) {
-
-    landingName.addEventListener("click", (event) => {
+    const reloadSite = (event) => {
 
         event.preventDefault();
 
-        if (landing) {
+        window.location.reload();
 
-            landing.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
+    };
 
-        }
+    if (landingName) {
 
-    });
+        landingName.addEventListener("click", reloadSite);
 
-}
+    }
 
+    if (aboutName) {
 
-/* =====================================================
-   ABOUT NAME → RETURN TO TOP
-   ===================================================== */
+        aboutName.addEventListener("click", reloadSite);
 
-if (aboutName) {
-
-    aboutName.addEventListener("click", (event) => {
-
-        event.preventDefault();
-
-        if (landing) {
-
-            landing.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        }
-
-    });
-
-}
-```
+    }
 
 });

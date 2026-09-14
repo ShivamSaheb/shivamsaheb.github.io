@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const about = document.getElementById("about");
     const landingName = document.querySelector("#Site a");
     const aboutName = document.querySelector("#AboutSite a");
+    const contactName = document.querySelector("#ContactSite a");
 
 
     /* =====================================================
@@ -73,6 +74,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (aboutName) {
 
         aboutName.addEventListener("click", reloadSite);
+
+    }
+
+    if (contactName) {
+
+        contactName.addEventListener("click", reloadSite);
 
     }
 

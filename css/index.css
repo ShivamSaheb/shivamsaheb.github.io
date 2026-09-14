@@ -292,6 +292,172 @@ body {
 
 
 /* =========================================================
+   CONTACT SECTION
+   ========================================================= */
+
+#contact {
+    position: relative;
+
+    width: 100vw;
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    background:
+        url('../images/websitebackground.png')
+        no-repeat
+        center center fixed;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    font: 15px Arial, Helvetica, sans-serif;
+
+    color: #0b212e;
+}
+
+
+/* =========================================================
+   CONTACT - SITE NAME
+   ========================================================= */
+
+#ContactSite {
+    float: left;
+
+    letter-spacing: 7px;
+    word-spacing: 10px;
+
+    padding-left: 40px;
+
+    min-height: 400px;
+
+    text-align: center;
+
+    position: absolute;
+
+    left: 0;
+    top: 1px;
+}
+
+#ContactSite h3 {
+    margin: 1em 0;
+}
+
+
+/* =========================================================
+   CONTACT - NAVIGATION
+   ========================================================= */
+
+#ContactElements {
+    letter-spacing: 3px;
+    word-spacing: 5px;
+
+    margin-right: 10px;
+
+    min-height: 400px;
+
+    text-align: center;
+
+    position: absolute;
+
+    right: 20px;
+    top: 1px;
+}
+
+#ContactElements h3 {
+    margin: 1em 0;
+}
+
+
+/* =========================================================
+   CONTACT LINKS
+   ========================================================= */
+
+#contact a {
+    color: #0b212e;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-size: 16px;
+}
+
+#contact a:hover {
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+
+    color: white;
+}
+
+
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
+
+#contact .ContactContainer {
+    max-width: 450px;
+
+    margin: 0 auto;
+
+    padding-top: 220px;
+    padding-bottom: 100px;
+
+    box-sizing: border-box;
+}
+
+#contact .forminputs {
+    margin: 40px 0;
+}
+
+#contact #first-name,
+#contact #last-name,
+#contact #email,
+#contact #subject,
+#contact #message {
+    border: 1px solid #0b212e;
+    border-style: none none solid none;
+
+    outline: 0;
+
+    background: transparent;
+
+    color: #0b212e;
+    font: 15px Arial, Helvetica, sans-serif;
+}
+
+#contact ::placeholder {
+    color: rgb(14, 52, 66);
+    opacity: 1;
+}
+
+#contact .btn-start-order {
+    background: transparent;
+    border: 1px solid #0b212e;
+
+    margin: 10px 90px;
+    padding: 10px 35px;
+
+    text-transform: uppercase;
+
+    transition: all 0.25s ease 0s;
+
+    cursor: pointer;
+}
+
+#contact .btn-start-order:hover,
+#contact .btn-start-order:active,
+#contact .btn-start-order:focus {
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+
+    color: #0b212e;
+    background: white;
+}
+
+
+/* =========================================================
    AUDIO
    ========================================================= */
 
@@ -385,11 +551,13 @@ body {
         bottom: 160px;
     }
 
-    #AboutSite {
+    #AboutSite,
+    #ContactSite {
         padding-left: 8vw;
     }
 
-    #AboutElements {
+    #AboutElements,
+    #ContactElements {
         right: 8vw;
         top: 60px;
 
@@ -411,5 +579,17 @@ body {
         padding-left: 10%;
 
         margin: 0 auto;
+    }
+
+    #contact .ContactContainer {
+        max-width: 90%;
+
+        padding-top: 260px;
+    }
+
+    #contact .btn-start-order {
+        margin: 10px auto;
+
+        display: block;
     }
 }

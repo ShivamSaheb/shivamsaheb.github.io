@@ -6,7 +6,7 @@ html {
     background-size: cover;
     font:15px Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
-    overflow-y: hidden;
+    overflow-y: auto;
   }
 
 #Elements{
@@ -52,7 +52,7 @@ a:hover{
     margin: 40px 0;
 }
 
-#name, #email, #subject, #message{
+#first-name, #last-name, #email, #subject, #message{
     border: 1px solid #0b212e;
     border-style: none none solid none;
     outline: 0;
@@ -78,30 +78,4 @@ a:hover{
     transition: 0.5s ease;
     color: #0b212e;
     background: white;
-}
-
-.column {
-    float: left;
-    width: 25%;
-    padding-top: 50px;
-    padding-left: 100px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-#aboutheadings {
-    text-align: center;
-    letter-spacing: 5px;
-    word-spacing: 10px;
-    text-transform: uppercase;
-}
-
-#aboutparas {
-    text-align: justify;
-    line-height: 2;
 }
